@@ -1,0 +1,90 @@
+---
+surname: Mike Mahoney
+address: "Analyst, Wayfair Inc."
+phone: 781-812-8842
+www: mikemahoney218.com
+email: "mike.mahoney.218@gmail.com"
+github: mikemahoney218
+linkedin: mikemahoney218
+date: "`r format(Sys.time(), '%B %Y')`"
+output: vitae::awesomecv
+docname: "Resume"
+headcolor: 414141 #08004f
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
+library(vitae)
+library(tibble)
+source("make_detailed_section.R")
+```
+
+# Education
+
+```{r}
+BS_ESF_18 <- vector("list")
+BS_ESF_18$Details <- c("Bachelor of Science with Honors magna cum laude in Forest Ecosystem Science (GPA: 3.723)", "December 2018", "State University of New York College of Environmental Science and Forestry (SUNY-ESF)", "Syracuse, New York")
+BS_ESF_18$Bullets <- c("Awards: Robin Hood Oak Award for Academic Excellence (2018), Robert M. Hicks Award for Academic Achievement (2018), Outstanding Student Award for Accomplishments in Field Ecology and Dendrology (2017), Outstanding Tutor (2016)",
+                       "Independent research presented at: New York Society of American Foresters (2019), Forest Ecosystem Monitoring Collaborative Conference (2017, 2018), Rochester Academy of Sciences (2017, 2018), Spotlight on Student Research (2018)")
+
+make_detailed_section(BS_ESF_18, order = 1:4)
+```
+
+
+# Work Experience
+```{r}
+## To reflect promotions, simply change the "with" and "where" arguments to "" -
+## that'll keep everything grouped under the same header
+Wayfair_Analyst_June19 <- vector("list")
+Wayfair_Analyst_June19$Details <- c("Analyst (Workforce Management - Forecasting & Analytics)", "June 2019 - Present", "Wayfair Inc.", "Boston, Massachusetts")
+Wayfair_Analyst_June19$Bullets <- c(
+  "Develop and launch department's first automated streaming data pipelines, connecting BuildKite, Docker, R, Python and T-SQL in order to create always-up real-time dashboards.",
+  "Implement process improvements including automating long-standing reporting (dramatically increasing reporting speed and accuracy) and introducing Git and related workflows to department.",
+  "Fill role as interdepartmental liaison between partner teams on matters of reporting methodologies, data availability, and data access.",
+  "Serve as department subject-matter expert on technical matters (including R, SQL, Git, and Docker")
+
+Stella_Researcher_Sep17 <- vector("list")
+Stella_Researcher_Sep17$Details <- c("Independent Researcher", "September 2017 - June 2019", "Stella Riparian and Stream Ecology Laboratory", "Syracuse, New York")
+Stella_Researcher_Sep17$Bullets <- c(
+  "Spearheaded design and implementation of research plan, including data collection from almost 200 field sites, over 2,000 miles of travel by researchers, data analysis, and statistical modeling to predict beaver impacts in complex natural systems, using R, SQL, and ESRI GIS technologies",
+  "Analyzed complex systems through use of statistical modeling and machine learning algorithms developed in R and Python",
+  "Developed intricate data visualizations (using R's ggplot2 and Python's Bokeh) and detailed reports used to inform policy at the state level",
+  "Invited to present results at Rochester Academy of Sciences (November 2018) and Forest Ecosystem Monitoring Collaborative Conference (December 2018)"
+  )
+
+Yanai_Intern_Sep17 <- vector("list")
+Yanai_Intern_Sep17$Details <- c("Research Intern", "September 2017 - April 2019", "Yanai Forest Ecosystem Science Laboratory", "Syracuse, New York")
+Yanai_Intern_Sep17$Bullets <- c(
+  "Analyzed quantitative and qualitative data in R, performing hypothesis testing, statistical estimation, and data visualization using non-parametric statistics in role as data analyst",
+  "Improved data collection speed significantly by creating and implementing novel image analysis methods using developing technologies", 
+  "Presented results at Rochester Academy of Sciences (November 2017), Forest Ecosystem Monitoring Collective Conference (December 2017), and Society of American Foresters (November 2018)"
+  )
+  
+ESF_HOL_Aug16 <- vector("list")
+ESF_HOL_Aug16$Details <- c("Head Orientation Leader", "August 2016 – November 2018", "Office of Student Involvement and Leadership – SUNY-ESF", "Syracuse, New York")
+ESF_HOL_Aug16$Bullets <- c("Hired, trained, and directed 50 orientation leaders in implementing 10-day new student orientation program and semester-long student success series",
+                           "Presented to audiences of up to 1,500 students and family members on various topics chosen to aid in the transition to college",
+                           "Organized year-long interdepartmental planning process for subsequent year's class of incoming students")
+
+make_detailed_section(Wayfair_Analyst_June19, 
+                      Stella_Researcher_Sep17, 
+                      Yanai_Intern_Sep17
+                      , ESF_HOL_Aug16
+                      )
+```
+
+# Additional Information
+```{r}
+OtherAccomplishments <- vector("list")
+OtherAccomplishments$Details <- c("Other Accomplishments", NA, NA, NA)
+OtherAccomplishments$Bullets <- c("Develop web application to help juvenile offenders seal or expunge their criminal records, with Code for Boston, and develop data analyses to help advocate for juvenile criminal justice reform with the Center for Juvenile Justice",
+  "Writing on data visualization theory featured in Towards Data Science (2019)")
+
+TechnicalSkills <- vector("list")
+TechnicalSkills$Details <- c("Technical Skills", NA, NA, NA)
+TechnicalSkills$Bullets <- c("Proficient in R, Python, SQL, SAS, and Linux shell languages, and combining these langauges to solve multifaceted data science problems",
+  "Experienced with techniques including containerization via Docker, version control via Git, and continuous integrations and deployment via BuildKite and other similar CI/CD solutions")
+
+make_detailed_section(OtherAccomplishments,
+                      TechnicalSkills)
+```

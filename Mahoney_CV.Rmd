@@ -1,0 +1,189 @@
+---
+surname: Mike Mahoney
+address: "Analyst, Wayfair Inc."
+phone: 781-812-8842
+www: mikemahoney218.com
+email: "mike.mahoney.218@gmail.com"
+github: mikemahoney218
+linkedin: mikemahoney218
+date: "`r format(Sys.time(), '%B %Y')`"
+output: vitae::awesomecv
+docname: "Curriculum Vitae"
+headcolor: 414141 #08004f
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
+library(vitae)
+library(tibble)
+source(make_detailed_section.R)
+```
+
+# Education
+
+```{r education}
+BS_ESF_18 <- vector("list")
+BS_ESF_18$Details <- c("Bachelor of Science with Honors magna cum laude in Forest Ecosystem Science (GPA: 3.723)", 
+                       "December 2018", 
+                       "State University of New York College of Environmental Science and Forestry (SUNY-ESF)", 
+                       "Syracuse, New York")
+BS_ESF_18$Bullets <- c("Thesis: Beaver Foraging Preferences and Impacts on Forest Structure in New York’s Adirondack Mountains")
+
+make_detailed_section(BS_ESF_18, order = 1:4)
+```
+
+# Research Experience
+
+```{r research}
+Stella_Researcher_Sep17 <- vector("list")
+Stella_Researcher_Sep17$Details <- c("Independent Researcher", "September 2017 - June 2019", "Stella Riparian and Stream Ecology Laboratory", "Syracuse, New York")
+Stella_Researcher_Sep17$Bullets <- c(
+  "Spearheaded design and implementation of research plan, including data collection from almost 200 field sites, over 2,000 miles of travel by researchers, data analysis, and statistical modeling to predict beaver impacts in complex natural systems, using R, SQL, and ESRI GIS technologies",
+  "Analyzed complex systems through use of statistical modeling and machine learning algorithms developed in R and Python",
+  "Developed intricate data visualizations (using R's ggplot2 and Python's Bokeh) and detailed reports used to inform policy at the state level"
+  )
+
+Yanai_Intern_Sep17 <- vector("list")
+Yanai_Intern_Sep17$Details <- c("Research Intern", "September 2017 - April 2019", "Yanai Forest Ecosystem Science Laboratory", "Syracuse, New York")
+Yanai_Intern_Sep17$Bullets <- c(
+  "Analyzed quantitative and qualitative data in R, performing hypothesis testing, statistical estimation, and data visualization using non-parametric statistics in role as data analyst",
+  "Improved data collection speed significantly by creating and implementing novel image analysis methods using developing technologies"
+  )
+
+make_detailed_section(Stella_Researcher_Sep17, 
+                      Yanai_Intern_Sep17)
+```
+
+
+# Teaching Experience
+
+```{r teaching}
+GIS_TA_18 <- vector("list")
+GIS_TA_18$Details <- c("Undergraduate Teaching Assistant",
+                       "August 2018 - December 2018",
+                       "Introduction to Geospatial Information Technologies - SUNY-ESF",
+                       "")
+GIS_TA_18$Bullets <- c("Instructed 33 undergraduate students in basics of geospatial information technologies, focusing primarily on applications in ESRI ArcGIS",
+"Assisted in overseeing 3 hour lab section, instructing students in use of GIS software and geospatial data concepts", 
+"Topics covered include vector and raster dataset creation and manipulation, working with geospatial databases, importing and manipulating field data, map design and creation, and ModelBuilder")
+
+WEM_Grader_18 <- vector("list")
+WEM_Grader_18$Details <- c("Course Grader",
+                       "October 2018 - December 2018",
+                       "Watershed Ecology and Management - SUNY-ESF",
+                       "")
+WEM_Grader_18$Bullets <- c("Graded exams and assignments for 99 undergraduate students",
+                           "Assisted TA in records keeping and data entry")
+
+Bio_TA_16 <- vector("list")
+Bio_TA_16$Details <- c("Undergraduate Teaching Assistant",
+                       "August 2016 - December 2016",
+                       "Organismal Biology and Ecology - SUNY-ESF",
+                       "")
+Bio_TA_16$Bullets <- c("Independently designed and facilitated hour-long review workshops for broad introductory biology course",
+                       "Topics covered include general ecology, phylogeny and evolutionary biology, plant systematics and physiology, and animal systematics and physiology",
+                       "Assisted in proctoring exams and quizzes")
+
+Tutor_16 <- vector("list")
+Tutor_16$Details <- c("Peer Tutor",
+                      "August 2016 - December 2018",
+                      "Academic Success Center - SUNY-ESF",
+                      "")
+Tutor_16$Bullets <- c("Worked as a tutor teaching and reinforcing general concepts of biology and organismal ecology",
+                      "Received “Tutor of the Semester” award for work during Fall 2016 semester")
+
+make_detailed_section(GIS_TA_18, WEM_Grader_18, Bio_TA_16, Tutor_16)
+```
+
+\newpage
+
+# Professional Experience
+```{r work}
+## To reflect promotions, simply change the "with" and "where" arguments to "" -
+## that'll keep everything grouped under the same header
+Wayfair_Analyst_June19 <- vector("list")
+Wayfair_Analyst_June19$Details <- c("Analyst (Workforce Management - Forecasting & Analytics)", "June 2019 - Present", "Wayfair Inc.", "Boston, Massachusetts")
+Wayfair_Analyst_June19$Bullets <- c(
+  "Develop and launch department's first automated streaming data pipelines, connecting BuildKite, Docker, R, Python, Bash, and T-SQL in order to create always-available real-time dashboards.",
+  "Implement process improvements including automating long-standing reporting (dramatically increasing reporting speed and accuracy) and introducing Git and related workflows to department.",
+  "Fill role as interdepartmental liaison between partner teams on matters of reporting methodologies, data availability, and data access.",
+  "Serve as department subject-matter expert on technical matters")
+
+Beaver_Intern_18 <- vector("list")
+Beaver_Intern_18$Details <- c("Beaver Impact Assessment Intern", 
+                              "May 2018 - August 2018", 
+                              "New York State Department of Environmental Conservation", 
+                              "Albany, New York")
+Beaver_Intern_18$Bullets <- c("Identified target field sites and access routes using R, SQL, and ESRI GIS technologies",
+"Supervised field technician while travelling extensively throughout New York State to gather field data",
+"Obtained competitive SUNY-ESF Career Fellowship grant, funding 13-week field season",
+"Authored reports on results for funding agency at SUNY-ESF, for land managers and practitioners with NYS-DEC, and as thesis for completion of degree at SUNY-ESF")
+
+ESF_HOL_Aug16 <- vector("list")
+ESF_HOL_Aug16$Details <- c("Head Orientation Leader", "August 2016 – November 2018", "Office of Student Involvement and Leadership – SUNY-ESF", "Syracuse, New York")
+ESF_HOL_Aug16$Bullets <- c("Hired, trained, and directed 50 orientation leaders in implementing 10-day new student orientation program and semester-long student success series",
+                           "Presented to audiences of up to 1,500 students and family members on various topics chosen to aid in the transition to college",
+                           "Organized year-long interdepartmental planning process for subsequent year's class of incoming students")
+
+Clean_Slate_19 <- vector("list")
+Clean_Slate_19$Details <- c("Data Scientist / Project Manager (Volunteer)", 
+                            "September 2019 - Present",
+                            "Code for Boston - Clean Slate Project",
+                            "Boston MA")
+Clean_Slate_19$Bullets <- c("Volunteer with civic technology group working with Citizens for Juvenile Justice and Greater Boston Legal Services to making it easier for Massachusetts residents to seal or expunge their criminal records",
+                            "Manage team of 40 volunteers in developing web applications designed to help speed up and explain the process of applying for record sealing",
+                            "Mine and wrangle complex data sources to enable deeper analyses into typical offender profiles",
+                            "Identify most impactful potential changes to law in order to help partners prioritize advocacy work")
+
+make_detailed_section(Wayfair_Analyst_June19, 
+                      Clean_Slate_19,
+                      Beaver_Intern_18,
+                      ESF_HOL_Aug16
+                      )
+```
+
+# Honors and Awards
+
+```{r}
+Awards <- tribble(
+  ~ What, ~ When, ~ Details,
+  "Robin Hood Oak Award for Academic Excellence", "2018", NA,
+  "Robert M. Hicks Award for Academic Achievement", "2018", NA,
+  "ESF Career Fellowship", 2018, NA,
+  "Outstanding Student Award for Accomplishments in Field Ecology and Dendrology", "2017", NA, 
+  "Tutor of the Semester", "2016", NA
+)
+
+brief_entries(Awards, What, When, Details)
+```
+
+
+# Software Development
+
+```{r packages}
+tribble(
+  ~ Pkg, ~ When, ~ Role, ~ Details,
+  "heddlr", "2020", "Lead developer", "Tools to enable functional programming workflows for dynamic R Markdown document generation."
+) %>% 
+  brief_entries(glue::glue("\\textbf{<Pkg>}: <Role> \\newline <Details>", .open = "<", .close = ">"), When, .protect = FALSE)
+```
+
+\newpage
+
+# Conference Presentations
+
+```{r talks}
+tribble(
+  ~ When, ~ Title, ~ Details, ~ url,
+  "2019", "Nutritional Impacts on Invasive Beech Scale Quantification in Beech Bark Disease Aftermath Forests.", "Dillon, G., Mahoney, M. J., Chase, S., and Johnston, M. Poster session presented at the New York Society of American Foresters Annual Meeting, Syracuse, NY.", "",
+  "2018", "Beaver Foraging Preferences and Impacts on Forest Structure in the
+Adirondack Mountains of New York.", "Mahoney, M. J., and Stella, J. C. Contributed talk at the Forest Ecosystem Monitoring Collective
+Conference, Burlington, VT.", "",
+"2018","Beaver Foraging Preferences and Impacts on Forest Structure in the Adirondack Mountains of New York.", "Mahoney, M. J., and Stella, J. C. Contributed talk at the Rochester Academy of Sciences Fall Scientific Paper Session, Geneseo, NY.", "https://www.slideshare.net/MichaelMahoney83/beaver-foraging-preferences-and-impacts-on-forest-structure-ras",
+"2018", "Impacts of Beaver on Forest Structure and Composition.", "Mahoney, M. J., Zevin, R., and Stella, J.C. Poster session presented at the Spotlight on Student Research, Syracuse, NY.", "",
+"2018", "Impacts of Fertilization on Causal Organisms of Beech Bark Disease.", "Mahoney, M. J., Leimanis, V., Desrochers, M. L., Giambona, B., Johnston, M. T., Yanai, R. D., and Dillon, G. A. Poster session presented at the Spotlight on Student Research, Syracuse, NY.", "",
+"2017", "An Investigation of Nutritional Effects on Beech Bark Disease Causal Organisms.", "Lasser, G. A., Johnston, M., Mahoney, M., Leimanis, V., and Stoodley, J. Poster session presented at the Forest Ecosystem Monitoring Collective Conference, Burlington, VT.", "",
+"2017", "An Investigation of Nutritional Effects on Beech Bark Disease Causal Organisms.", "Lasser, G. A., Johnston, M., Mahoney, M., Leimanis, V., and Stoodley, J. Poster session presented at the Rochester Academy of Sciences Fall Scientific Paper Session, Rochester, NY.", ""
+) %>% 
+  brief_entries(glue::glue("\\textbf{<Title>} <Details> \\newline \\url{<url>}", .open = "<", .close = ">"), When, .protect = FALSE)
+```
