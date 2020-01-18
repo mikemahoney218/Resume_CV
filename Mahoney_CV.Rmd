@@ -38,9 +38,9 @@ make_detailed_section(BS_ESF_18, order = 1:4)
 Stella_Researcher_Sep17 <- vector("list")
 Stella_Researcher_Sep17$Details <- c("Independent Researcher", "September 2017 - June 2019", "Stella Riparian and Stream Ecology Laboratory", "Syracuse, New York")
 Stella_Researcher_Sep17$Bullets <- c(
-  "Spearheaded design and implementation of research plan, including data collection from almost 200 field sites, over 2,000 miles of travel by researchers, data analysis, and statistical modeling to predict beaver impacts in complex natural systems, using R, SQL, and ESRI GIS technologies",
+  "Spearheaded design and implementation of research plan, including data collection from almost 200 field sites, over 2,000 miles of travel by researchers, data analysis, and statistical modeling to predict beaver impacts in complex natural systems, using R and ESRI GIS technologies",
   "Analyzed complex systems through use of statistical modeling and machine learning algorithms developed in R and Python",
-  "Developed intricate data visualizations (using R's ggplot2 and Python's Bokeh) and detailed reports used to inform policy at the state level"
+  "Developed data visualizations and detailed reports used to inform policy at the state level"
   )
 
 Yanai_Intern_Sep17 <- vector("list")
