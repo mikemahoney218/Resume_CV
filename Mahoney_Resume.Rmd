@@ -19,18 +19,6 @@ library(tibble)
 source("make_detailed_section.R")
 ```
 
-# Education
-
-```{r}
-BS_ESF_18 <- vector("list")
-BS_ESF_18$Details <- c("Bachelor of Science with Honors magna cum laude in Forest Ecosystem Science (GPA: 3.723)", "December 2018", "State University of New York College of Environmental Science and Forestry (SUNY-ESF)", "Syracuse, New York")
-BS_ESF_18$Bullets <- c("Awards: Robin Hood Oak Award for Academic Excellence (2018), Robert M. Hicks Award for Academic Achievement (2018), Outstanding Student Award for Accomplishments in Field Ecology and Dendrology (2017), Outstanding Tutor (2016)",
-                       "Independent research presented at: New York Society of American Foresters (2019), Forest Ecosystem Monitoring Collaborative Conference (2017, 2018), Rochester Academy of Sciences (2017, 2018), Spotlight on Student Research (2018)")
-
-make_detailed_section(BS_ESF_18, order = 1:4)
-```
-
-
 # Work Experience
 ```{r}
 ## To reflect promotions, simply change the "with" and "where" arguments to "" -
@@ -38,10 +26,10 @@ make_detailed_section(BS_ESF_18, order = 1:4)
 Wayfair_Analyst_June19 <- vector("list")
 Wayfair_Analyst_June19$Details <- c("Analyst (Workforce Management - Forecasting & Analytics)", "June 2019 - Present", "Wayfair Inc.", "Boston, Massachusetts")
 Wayfair_Analyst_June19$Bullets <- c(
-  "Develop and launch department's first automated streaming data pipelines, connecting BuildKite, Docker, R, Python and T-SQL in order to create always-up real-time dashboards.",
-  "Implement process improvements including automating long-standing reporting (dramatically increasing reporting speed and accuracy) and introducing Git and related workflows to department.",
-  "Fill role as interdepartmental liaison between partner teams on matters of reporting methodologies, data availability, and data access.",
-  "Serve as department subject-matter expert on technical matters (including R, SQL, Git, and Docker")
+  "Developed and launched department's first automated streaming data pipelines, connecting BuildKite, Docker, R, Python and T-SQL in order to create always-up real-time dashboards of contact center production for customer service leadership team.",
+  "Implemented process improvements including automating long-standing reporting (transforming monthly reporting into daily updates and increasing the accuracy of analytics) and introducing Git and related workflows to department.",
+  "Demonstrated leadership as interdepartmental liaison between partner teams on matters of reporting methodologies, data availability, and data access.",
+  "Served as department subject-matter expert on technical matters (including R, SQL, Git, and Docker) on projects ranging from automating analytics to developing CI/CD workflows.")
 
 Stella_Researcher_Sep17 <- vector("list")
 Stella_Researcher_Sep17$Details <- c("Independent Researcher", "September 2017 - June 2019", "Stella Riparian and Stream Ecology Laboratory", "Syracuse, New York")
@@ -85,6 +73,17 @@ TechnicalSkills$Details <- c("Technical Skills", NA, NA, NA)
 TechnicalSkills$Bullets <- c("Proficient in R, Python, SQL, SAS, and Linux shell languages, and combining these langauges to solve multifaceted data science problems",
   "Experienced with techniques including containerization via Docker, version control via Git, and continuous integrations and deployment via BuildKite and other similar CI/CD solutions")
 
-make_detailed_section(OtherAccomplishments,
-                      TechnicalSkills)
+make_detailed_section(TechnicalSkills)
+```
+
+
+# Education
+
+```{r}
+BS_ESF_18 <- vector("list")
+BS_ESF_18$Details <- c("Bachelor of Science with Honors magna cum laude in Forest Ecosystem Science (GPA: 3.723)", "December 2018", "State University of New York College of Environmental Science and Forestry (SUNY-ESF)", "Syracuse, New York")
+BS_ESF_18$Bullets <- c("Awards: Robin Hood Oak Award for Academic Excellence (2018), Robert M. Hicks Award for Academic Achievement (2018), Outstanding Student Award for Accomplishments in Field Ecology and Dendrology (2017), Outstanding Tutor (2016)",
+                       "Independent research presented at: New York Society of American Foresters (2019), Forest Ecosystem Monitoring Collaborative Conference (2017, 2018), Rochester Academy of Sciences (2017, 2018), Spotlight on Student Research (2018)")
+
+make_detailed_section(BS_ESF_18, order = 1:4)
 ```
