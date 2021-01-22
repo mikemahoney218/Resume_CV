@@ -1,6 +1,6 @@
 ---
 surname: Mike Mahoney
-address: "Analyst, Wayfair Inc."
+address: "" # Subhead under name 
 phone: 781-812-8842
 www: mm218.dev
 email: "mike.mahoney.218@gmail.com"
@@ -23,6 +23,12 @@ source("make_detailed_section.R")
 
 ```{r education}
 PHD_ESF_Current <- vector("list")
+PHD_ESF_Current$Details <- c("Doctor of Philosophy in Environmental Science (Area of Study: Coupled Natural and Human Systems)", 
+                       "August 2020 - Present", 
+                       "State University of New York College of Environmental 
+                       Science and Forestry (SUNY-ESF)", 
+                       "Syracuse, New York")
+PHD_ESF_Current$Bullets <- NA
 
 BS_ESF_18 <- vector("list")
 BS_ESF_18$Details <- c("Bachelor of Science with Honors magna cum laude in 
@@ -34,6 +40,7 @@ BS_ESF_18$Details <- c("Bachelor of Science with Honors magna cum laude in
 BS_ESF_18$Bullets <- c("Thesis: Beaver Foraging Preferences and Impacts on 
                        Forest Structure in New York’s Adirondack Mountains")
 
+make_detailed_section(PHD_ESF_Current, order = 1:4)
 make_detailed_section(BS_ESF_18, order = 1:4)
 ```
 
@@ -46,15 +53,14 @@ make_detailed_section(BS_ESF_18, order = 1:4)
 
 # Publications
 
-## In Review
-
 ```{r}
 tribble(
-  ~ When, ~ Title, ~ Details, ~ url,
-  "2020", "Stem size selectivity is stronger than species preferences for beaver, a central place
-forager.", "Mahoney, M. J., and Stella, J. C. Forest Ecology and Management.", "",
+  ~ When, ~ BeforeYou, ~ You, ~ AfterYou, ~ Title, ~ Details, ~ url,
+  "2020", "", "Mahoney, M. J.,", "and Stella, J. C. 2020.",
+  "Stem size selectivity is stronger than species preferences for beaver, a central place forager.", 
+  "Forest Ecology and Management 475 118331.", "https://doi.org/10.1016/j.foreco.2020.118331",
 ) %>% 
-  brief_entries(glue::glue("\\textbf{<Title>} <Details> \\newline \\url{<url>}", 
+  brief_entries(glue::glue("<BeforeYou> \\textbf{<You>} <AfterYou> <Title> <Details> \\url{<url>}", 
                            .open = "<", 
                            .close = ">"), 
                 When, 
@@ -65,16 +71,16 @@ forager.", "Mahoney, M. J., and Stella, J. C. Forest Ecology and Management.", "
 
 ```{r}
 Awards <- tribble(
-  ~ What, ~ When, ~ Details,
-  "Robin Hood Oak Award for Academic Excellence", "2018", NA,
-  "Robert M. Hicks Award for Academic Achievement", "2018", NA,
-  "ESF Career Fellowship", 2018, NA,
+  ~ What, ~ When,
+  "Robin Hood Oak Award for Academic Excellence", "2018",
+  "Robert M. Hicks Award for Academic Achievement", "2018",
+  "ESF Career Fellowship", "2018",
   "Outstanding Student Award for Accomplishments in Field Ecology and 
-  Dendrology", "2017", NA, 
-  "Tutor of the Semester", "2016", NA
+  Dendrology", "2017",
+  "Tutor of the Semester", "2016"
 )
 
-brief_entries(Awards, What, When, Details)
+brief_entries(Awards, What, When)
 ```
 
 ```{r, eval=FALSE}
@@ -113,6 +119,9 @@ tribble(
                 When, 
                 .protect = FALSE)
 ```
+\newpage
+
+# Conference Activity
 
 ## Poster Presentations
 
@@ -143,7 +152,7 @@ tribble(
 # No guest lectures, that's padding
 ```
 
-\newpage
+
 
 # Teaching Experience
 
@@ -199,7 +208,7 @@ tribble(
 # Community Involvement/Outreach. [Optional.]  This includes work with libraries and schools, public lectures, etc.
 tribble(
   ~ When, ~ Group, ~ Role, ~ Details,
-  "2019 - Present", "Code for Boston - Clean Slate Project.", 
+  "2019-2020", "Code for Boston - Clean Slate Project.", 
   "Data Scientist and Project Manager (Volunteer)", 
   "Project working with Greater Boston Legal Society to advance criminal justice reform efforts."
 ) %>% 
@@ -218,7 +227,7 @@ tribble(
 ```{r work}
 tribble(
   ~ When, ~ What, ~Who, ~ Where,
-  "2019 - Present", "Analyst, Forecasting and Analytics", "Wayfair, Inc", "Boston, MA",
+  "2019-2020", "Analyst, Forecasting and Analytics", "Wayfair, Inc", "Boston, MA",
   "2018", "Beaver Impact Assessment Intern", "\\newline{} New York State Department of Environmental Conservation", "Albany, New York"
 ) %>% 
   brief_entries(glue::glue("\\textbf{<What>}. <Who>. <Where>.", 
@@ -233,6 +242,8 @@ tribble(
 ```{r packages}
 tribble(
   ~ Pkg, ~ When, ~ Role, ~ Details,
+  "terrainr", "2021", "Lead developer", "Retrieve Data from the USGS National 
+  Map and Transform it for 3D Landscape Visualizations.",
   "heddlr", "2020", "Lead developer", "Tools to enable functional programming 
   workflows for dynamic R Markdown document generation.",
   "spacey", "2020", "Lead developer", "USGS and ESRI data access for beautiful 
