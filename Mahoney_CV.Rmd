@@ -94,6 +94,39 @@ brief_entries(Awards, What, When)
 # title, institution, date, year on left
 ```
 
+# Teaching Experience
+
+## State University of New York College of Environmental Science and Forestry
+
+```{r teaching}
+tribble(
+  ~ When, ~ Title, ~ Role,
+  "Fall 2018", "Introduction to Geospatial Information Technologies", "Teaching Assistant",
+  "Fall 2018", "Watershed Ecology and Management", "Course Grader",
+  "Fall 2016", "General Biology I: Organismal Biology and Ecology", "Teaching Assistant"
+) %>% 
+  brief_entries(glue::glue("\\textbf{<Title>}. <Role>. <When>", 
+                           .open = "<", 
+                           .close = ">"),
+                .protect = FALSE)
+```
+
+# Research Experience
+
+```{r research}
+tribble(
+  ~ When, ~ Lab, ~ Role,
+  "2017-2020", "Stella Riparian and Stream Ecology Laboratory", "Independent Researcher",
+  "2017-2019", "Yanai Forest Ecosystem Science Laboratory", "Research Intern"
+) %>% 
+  brief_entries(glue::glue("\\textbf{<Lab>} \\newline{}<Role>", 
+                           .open = "<", 
+                           .close = ">"), 
+                When, 
+                .protect = FALSE)
+```
+
+\newpage
 
 # Conference Activity
 
@@ -102,7 +135,6 @@ brief_entries(Awards, What, When)
 # These entries will include: Name of paper, name of conference, date. 
 # Future conferences SHOULD be listed here, if you have had a paper or panel officially accepted.
 ```
-
 
 ## Contributed Talks
 
@@ -119,9 +151,6 @@ tribble(
                 When, 
                 .protect = FALSE)
 ```
-\newpage
-
-# Conference Activity
 
 ## Poster Presentations
 
@@ -153,38 +182,6 @@ tribble(
 ```
 
 
-
-# Teaching Experience
-
-## State University of New York College of Environmental Science and Forestry
-
-```{r teaching}
-tribble(
-  ~ When, ~ Title, ~ Role,
-  "Fall 2018", "Introduction to Geospatial Information Technologies", "Teaching Assistant",
-  "Fall 2018", "Watershed Ecology and Management", "Course Grader",
-  "Fall 2016", "General Biology I: Organismal Biology and Ecology", "Teaching Assistant"
-) %>% 
-  brief_entries(glue::glue("\\textbf{<Title>}. <Role>. <When>", 
-                           .open = "<", 
-                           .close = ">"),
-                .protect = FALSE)
-```
-
-# Research Experience
-
-```{r research}
-tribble(
-  ~ When, ~ Lab, ~ Role,
-  "2017-2020", "Stella Riparian and Stream Ecology Laboratory", "Independent Researcher",
-  "2017-2019", "Yanai Forest Ecosystem Science Laboratory", "Research Intern"
-) %>% 
-  brief_entries(glue::glue("\\textbf{<Lab>} <Role>", 
-                           .open = "<", 
-                           .close = ">"), 
-                When, 
-                .protect = FALSE)
-```
 
 ```{r, eval = FALSE}
 # Service To Profession. 
@@ -228,9 +225,9 @@ tribble(
 tribble(
   ~ When, ~ What, ~Who, ~ Where,
   "2019-2020", "Analyst, Forecasting and Analytics", "Wayfair, Inc", "Boston, MA",
-  "2018", "Beaver Impact Assessment Intern", "\\newline{} New York State Department of Environmental Conservation", "Albany, New York"
+  "2018", "Beaver Impact Assessment Intern", "New York State Department of Environmental Conservation", "Albany, New York"
 ) %>% 
-  brief_entries(glue::glue("\\textbf{<What>}. <Who>. <Where>.", 
+  brief_entries(glue::glue("\\textbf{<What>}. \\newline{}<Who>. <Where>.", 
                            .open = "<", 
                            .close = ">"), 
                 When, 
@@ -256,12 +253,22 @@ tribble(
                 .protect = FALSE)
 ```
 
-\newpage
+# Affiliations
 
-```{r, eval=FALSE}
+```{r affiliations}
 # Professional Memberships/Affiliations. 
 # All professional organizations of which you are a member listed vertically. 
 # Include years of joining when you are more senior and those years recede into the past—demonstrates length of commitment to a field.
+
+tribble(
+  ~ When, ~ What, ~Who,
+  "2021 - Present", "The Carpentries", "Instructor in good standing"
+) %>% 
+  brief_entries(glue::glue("\\textbf{<What>}. <Who>", 
+                           .open = "<", 
+                           .close = ">"), 
+                When, 
+                .protect = FALSE)
 ```
 
 
