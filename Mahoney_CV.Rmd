@@ -125,6 +125,7 @@ brief_entries(Awards, What, When)
 ```{r invited}
 tribble(
   ~ When, ~ Title, ~ Details, ~ url,
+  "2021", "terrainr: Spatial Data Access and Visualization in R.", "Mahoney, M. J. Earth Science Information Partners, Severna Park. MD", "",
   "2021", "Accessing the USGS National Map and Making 3D Maps with terrainr.", "Nell, C., Mahoney, M. J., and Platt, L. USGS Center for Data Integration, Lakewood, CO.", "",
   "2021", "terrainr: Landscape Visualizations Using Data from the National Map.", "Mahoney, M. J. USGS National Geospatial Technical Operations Center, Denver, CO.", "") %>% 
   brief_entries(glue::glue("\\textbf{<Title>} <Details> \\newline \\url{<url>}", 
@@ -144,12 +145,25 @@ tribble(
 # Future conferences SHOULD be listed here, if you have had a paper or panel officially accepted.
 ```
 
+## Workshops Facilitated
+
+```{r conference_workshops}
+tribble(
+  ~ When, ~ Title, ~ Details, ~ url,
+  "2021", "Interactive 3D visualizations of environmental data using the terrainr R package.", "Mahoney, M. J., and Beier, C. M., and Ackerman, A. C. Workshop organized at the Visual Resources Stewardship Conference, Syracuse, NY.", "") %>% 
+  brief_entries(glue::glue("\\textbf{<Title>} <Details> \\newline \\url{<url>}", 
+                           .open = "<", 
+                           .close = ">"), 
+                When, 
+                .protect = FALSE)
+```
+
 ## Contributed Talks
 
 ```{r talks}
 tribble(
   ~ When, ~ Title, ~ Details, ~ url,
-  "2021", "Interactive 3D visualizations of environmental data using the terrainr R package.", "Mahoney, M. J., and Beier, C. M., and Ackerman, A. C. Paper presented at Visual Resources Stewardship Conference, Syracuse, NY.", "",
+  "2021", "Interactive 3D visualizations of environmental data using the terrainr R package.", "Mahoney, M. J., and Beier, C. M., and Ackerman, A. C. Paper presented at the Visual Resources Stewardship Conference, Syracuse, NY.", "",
   "2021", "Virtual Environments: Using R as a Frontend for 3D Rendering of Digital Landscapes",  "Mahoney, M. J., and Beier, C. M., and Ackerman, A. C. useR! 2021, Zürich, Switzerland.", "",
   "2018", "Beaver Foraging Preferences and Impacts on Forest Structure in the Adirondack Mountains of New York.", 
   "Mahoney, M. J., and Stella, J. C. Forest Ecosystem Monitoring Collective Conference, Burlington, VT.", "", 
@@ -199,13 +213,30 @@ tribble(
 ```{r}
 tribble(
   ~ When, ~ Title, ~ Role,
-  "Fall 2021", "Machine Learning for Prediction: Concepts and Applications in R", "Instructor of Record"
+  "Fall 2021", "Machine Learning Concepts and Applications", "Instructor of Record"
 ) %>% 
   brief_entries(glue::glue("\\textbf{<Title>}. <Role>. <When>", 
                            .open = "<", 
                            .close = ">"),
                 .protect = FALSE)
 ```
+
+## Workshops Facilitated
+
+```{r}
+tribble(
+  ~ When, ~ Title, ~ Details, ~ url,
+  "2021", "Computational Skills for Researchers", "Mahoney, M. J. SUNY-ESF, Syracuse, NY.", "",
+  "2021", "Software Carpentry: The Unix Shell, Version Control with Git, and R for Reproducible Scientific Analysis",  "Mahoney, M. J., and Devlin, M.D. SUNY-ESF, Syracuse, NY (Virtual).", "",
+) %>% 
+  brief_entries(glue::glue("\\textbf{<Title>}. <Details> \\newline \\url{<url>}", 
+                           .open = "<", 
+                           .close = ">"), 
+                When, 
+                .protect = FALSE)
+```
+
+
 
 ```{r, eval = FALSE}
 # Research Experience. 
@@ -245,6 +276,8 @@ tribble(
 # Extracurricular University Service. [Optional. ] Can include involvement in student groups, sporting clubs, etc.
 ```
 
+\newpage{} 
+
 # Community Involvement and Outreach
 
 ```{r}
@@ -265,8 +298,6 @@ tribble(
 ```{r, eval = FALSE}
 # Media Coverage. [Optional.] Coverage of your work by the media.
 ```
-
-\newpage{} 
 
 # Software Development
 
@@ -299,7 +330,7 @@ tribble(
   "2021 - Present", "The Carpentries", "Instructor in good standing.",
   "2021 - Present", "American Geophyiscal Union", "Member.",
   "2021 - Present", "NYS GIS Association", "Member.",
-  "2018 - Present", "Data Visualization Society", "Member."
+  "2019 - Present", "Data Visualization Society", "Member."
 ) %>% 
   brief_entries(glue::glue("\\textbf{<What>}. <Who>", 
                            .open = "<", 
