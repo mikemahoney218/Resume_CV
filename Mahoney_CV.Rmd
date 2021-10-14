@@ -60,7 +60,7 @@ tribble(
   ~ When, ~ BeforeYou, ~ You, ~ AfterYou, ~ Title, ~ Details, ~ url,
   "2021", "Tamiminia, H., Salehi, B., Mahdianpari, M., Beier, C. M., Johnson, L. K., Phoenix, D. B., and", "Mahoney, M. J.", " In Review.", "", "Decision tree-based machine learning models for above-ground biomass estimation using multi-source remote sensing data and object-based image analysis. In review at Geocarto International", "",
   "2021", "", "Mahoney, M. J.,", "Johnson, J. K., Bevilacqua, E., and Beier, C. M. In Review.", "Ground noise filtering produces inferior models of forest aboveground biomass.", "In review at Remote Sensing of Environment", "",
-  "2021", "", "Mahoney, M. J.,", "Beier, C. M., and Ackerman, A. C. In Review.", "Interactive 3D visualizations of geospatial data using the terrainr R package.", "In review at International Journal of Digital Earth", ""
+  "2021", "", "Mahoney, M. J.,", "Beier, C. M., and Ackerman, A. C. In Review.", "Interactive 3D visualizations of geospatial data using the terrainr R package.", "In review at Environmental Modeling and Software", ""
 ) %>% 
   brief_entries(glue::glue("<BeforeYou> \\textbf{<You>} <AfterYou> <Title> <Details>. \\url{<url>}", 
                            .open = "<", 
@@ -68,28 +68,14 @@ tribble(
                 When, 
                 .protect = FALSE)
 ```
-
-## In Press
-
-```{r}
-tribble(
-  ~ When, ~ BeforeYou, ~ You, ~ AfterYou, ~ Title, ~ Details, ~ url,
-  "2021", "", "Mahoney, M. J.,", "Beier, C. M., and Ackerman, A. C. In Review.", "Interactive landscape simulations for visual resource assessment.", "In review for Proceedings of the 2021 Visual Resources Stewardship Conference", ""
-) %>% 
-  brief_entries(glue::glue("<BeforeYou> \\textbf{<You>} <AfterYou> <Title> <Details>. \\url{<url>}", 
-                           .open = "<", 
-                           .close = ">"), 
-                When, 
-                .protect = FALSE)
-```
-
 
 ## Peer-Reviewed Publications
 
 ```{r}
 tribble(
   ~ When, ~ BeforeYou, ~ You, ~ AfterYou, ~ Title, ~ Details, ~ url,
-  "2020", "", "Mahoney, M. J.,", "and Stella, J. C. 2020.",
+    "2021", "", "Mahoney, M. J.,", "Beier, C. M., and Ackerman, A. C. 2021.", "Interactive landscape simulations for visual resource assessment.", "VRSC 2021 Conference Proceedings", "",
+  "2020", "", "Mahoney, M. J.", "and Stella, J. C. 2020.",
   "Stem size selectivity is stronger than species preferences for beaver, a central place forager.", 
   "Forest Ecology and Management 475 118331", "https://doi.org/10.1016/j.foreco.2020.118331",
 ) %>% 
@@ -126,11 +112,11 @@ brief_entries(Awards, What, When)
 
 ```{r invited}
 tribble(
-  ~ When, ~ Title, ~ Details, ~ url,
-  "2021", "terrainr: Spatial Data Access and Visualization in R.", "Mahoney, M. J. Earth Science Information Partners, Severna Park. MD", "",
-  "2021", "Accessing the USGS National Map and Making 3D Maps with terrainr.", "Nell, C., Mahoney, M. J., and Platt, L. USGS Center for Data Integration, Lakewood, CO.", "",
-  "2021", "terrainr: Landscape Visualizations Using Data from the National Map.", "Mahoney, M. J. USGS National Geospatial Technical Operations Center, Denver, CO.", "") %>% 
-  brief_entries(glue::glue("\\textbf{<Title>} <Details> \\newline \\url{<url>}", 
+  ~ When, ~ BeforeYou, ~ You, ~ AfterYou, ~ Title, ~ Details, ~ url,
+  "2021", "", "Mahoney, M. J.", "", "terrainr: Spatial data access and visualization in R.", "Earth Science Information Partners, Severna Park, MD (Virtual).", "",
+  "2021", "Nell, C., ", "Mahoney, M. J.,", "and Platt, L.", "Accessing the USGS National Map and making 3D maps with terrainr.", "USGS Center for Data Integration, Lakewood, CO (Virtual).", "",
+  "2021", "", "Mahoney, M. J.", "", "terrainr: Landscape visualizations using data from The National Map.", "USGS National Geospatial Technical Operations Center, Denver, CO (Virtual).", "") %>% 
+  brief_entries(glue::glue("<BeforeYou> \\textbf{<You>} <AfterYou> <Title> <Details>. \\url{<url>}", 
                            .open = "<", 
                            .close = ">"), 
                 When, 
@@ -151,9 +137,9 @@ tribble(
 
 ```{r conference_workshops}
 tribble(
-  ~ When, ~ Title, ~ Details, ~ url,
-  "2021", "Interactive 3D visualizations of environmental data using the terrainr R package.", "Mahoney, M. J., and Beier, C. M., and Ackerman, A. C. Workshop organized at the Visual Resources Stewardship Conference, Syracuse, NY.", "") %>% 
-  brief_entries(glue::glue("\\textbf{<Title>} <Details> \\newline \\url{<url>}", 
+  ~ When, ~ BeforeYou, ~ You, ~ AfterYou, ~ Title, ~ Details, ~ url,
+  "2021", "", "", "", "Interactive 3D visualizations of environmental data using the terrainr R package.", "Beier, C. M., and Ackerman, A. C. Workshop organized at the Visual Resources Stewardship Conference, Syracuse, NY (Virtual).", "") %>% 
+  brief_entries(glue::glue("<BeforeYou> \\textbf{<You>} <AfterYou> <Title> <Details>. \\url{<url>}", 
                            .open = "<", 
                            .close = ">"), 
                 When, 
@@ -165,8 +151,10 @@ tribble(
 ```{r talks}
 tribble(
   ~ When, ~ Title, ~ Details, ~ url,
-  "2021", "Interactive 3D visualizations of environmental data using the terrainr R package.", "Mahoney, M. J., and Beier, C. M., and Ackerman, A. C. Paper presented at the Visual Resources Stewardship Conference, Syracuse, NY.", "",
-  "2021", "Virtual Environments: Using R as a Frontend for 3D Rendering of Digital Landscapes",  "Mahoney, M. J., and Beier, C. M., and Ackerman, A. C. useR! 2021, Zürich, Switzerland.", "",
+  "2021", "Broad-scale forest biomass mapping: generating contiguous high-resolution predictions using a spatio-temporal patchwork of LiDAR coverages across a mixed-use landscape", "Johnson, L. K., Mahoney, M. J., Bevilacqua, E., and Beier, C. M. American Geophysical Union Fall Meeting, New Orleans, LA.", "",
+  "2021", "Greening Up Before Growing Up: Challenges in Modeling Forest Biomass Recovery Post-Harvest Using Satellite Imagery.", "Johnson, L. K., Beier, C. M., and Mahoney, M. J. Society of American Foresters National Convention. Virtual.", "",
+  "2021", "Interactive 3D visualizations of environmental data using the terrainr R package.", "Mahoney, M. J., and Beier, C. M., and Ackerman, A. C. Paper presented at the Visual Resources Stewardship Conference, Syracuse, NY (Virtual).", "",
+  "2021", "Virtual Environments: Using R as a Frontend for 3D Rendering of Digital Landscapes",  "Mahoney, M. J., and Beier, C. M., and Ackerman, A. C. useR! 2021, Zürich, Switzerland (Virtual).", "",
   "2018", "Beaver Foraging Preferences and Impacts on Forest Structure in the Adirondack Mountains of New York.", 
   "Mahoney, M. J., and Stella, J. C. Forest Ecosystem Monitoring Collective Conference, Burlington, VT.", "", 
   "2018","Beaver Foraging Preferences and Impacts on Forest Structure in the Adirondack Mountains of New York.", 
@@ -183,6 +171,7 @@ tribble(
 ```{r}
 tribble(
   ~ When, ~ Title, ~ Details, ~ url,
+  "2021", "Filtering ground noise from LiDAR returns produces inferior models of forest aboveground biomass.", "Mahoney, M. J., Johnson, L. K., Bevilacqua, E., and Beier, C. M. American Geophysical Union Fall Meeting, New Orleans, LA.", "",
   "2019", "Nutritional Impacts on Invasive Beech Scale Quantification in Beech Bark Disease Aftermath Forests.", 
   "Dillon, G., Mahoney, M. J., Chase, S., and Johnston, M. New York Society of American Foresters Annual Meeting, Syracuse, NY.", "",
   "2018", "Impacts of Beaver on Forest Structure and Composition.", 
@@ -207,6 +196,22 @@ tribble(
 # No guest lectures, that's padding
 ```
 
+
+# Research Experience
+
+```{r research}
+tribble(
+  ~ When, ~ Lab, ~ Role,
+  "2020-Present", "Climate And Applied Forest Research Institute, SUNY-ESF", "Research Assistant"
+) %>% 
+  brief_entries(glue::glue("\\textbf{<Lab>} \\newline{}<Role>", 
+                           .open = "<", 
+                           .close = ">"), 
+                When, 
+                .protect = FALSE)
+```
+
+\newpage{} 
 
 # Teaching Experience
 
@@ -248,19 +253,6 @@ tribble(
 # One detailed sentence should suffice.  
 ```
 
-# Research Experience
-
-```{r research}
-tribble(
-  ~ When, ~ Lab, ~ Role,
-  "2020-Present", "Climate And Applied Forest Research Institute, SUNY-ESF", "Research Assistant"
-) %>% 
-  brief_entries(glue::glue("\\textbf{<Lab>} \\newline{}<Role>", 
-                           .open = "<", 
-                           .close = ">"), 
-                When, 
-                .protect = FALSE)
-```
 
 ```{r, eval = FALSE}
 # Service To Profession. 
@@ -277,8 +269,6 @@ tribble(
 ```{r, eval = FALSE}
 # Extracurricular University Service. [Optional. ] Can include involvement in student groups, sporting clubs, etc.
 ```
-
-\newpage{} 
 
 # Community Involvement and Outreach
 
