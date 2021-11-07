@@ -103,6 +103,18 @@ Awards <- tribble(
 brief_entries(Awards, What, When)
 ```
 
+# Fellowships
+
+```{r}
+Fellowships <- tribble(
+  ~ What, ~ When,
+  "Federation of Earth Science Information Partners (ESIP) Community Fellowship - Machine Learning Cluster", "2022", 
+)
+
+brief_entries(Fellowships, What, When)
+```
+
+
 ```{r, eval=FALSE}
 # Grants and Fellowships
 # funder, institutional location recieved at, year span
@@ -113,9 +125,9 @@ brief_entries(Awards, What, When)
 ```{r invited}
 tribble(
   ~ When, ~ BeforeYou, ~ You, ~ AfterYou, ~ Title, ~ Details, ~ url,
-  "2021", "", "Mahoney, M. J.", "", "terrainr: Spatial data access and visualization in R.", "Earth Science Information Partners, Severna Park, MD (Virtual).", "",
-  "2021", "Nell, C., ", "Mahoney, M. J.,", "and Platt, L.", "Accessing the USGS National Map and making 3D maps with terrainr.", "USGS Center for Data Integration, Lakewood, CO (Virtual).", "",
-  "2021", "", "Mahoney, M. J.", "", "terrainr: Landscape visualizations using data from The National Map.", "USGS National Geospatial Technical Operations Center, Denver, CO (Virtual).", "") %>% 
+  "2021", "", "Mahoney, M. J.", "", "terrainr: Spatial data access and visualization in R.", "Earth Science Information Partners, Severna Park, MD (Virtual)", "",
+  "2021", "Nell, C., ", "Mahoney, M. J.,", "and Platt, L.", "Accessing the USGS National Map and making 3D maps with terrainr.", "USGS Center for Data Integration, Lakewood, CO (Virtual)", "",
+  "2021", "", "Mahoney, M. J.", "", "terrainr: Landscape visualizations using data from The National Map.", "USGS National Geospatial Technical Operations Center, Denver, CO (Virtual)", "") %>% 
   brief_entries(glue::glue("<BeforeYou> \\textbf{<You>} <AfterYou> <Title> <Details>. \\url{<url>}", 
                            .open = "<", 
                            .close = ">"), 
@@ -138,7 +150,7 @@ tribble(
 ```{r conference_workshops}
 tribble(
   ~ When, ~ BeforeYou, ~ You, ~ AfterYou, ~ Title, ~ Details, ~ url,
-  "2021", "", "", "", "Interactive 3D visualizations of environmental data using the terrainr R package.", "Beier, C. M., and Ackerman, A. C. Workshop organized at the Visual Resources Stewardship Conference, Syracuse, NY (Virtual).", "") %>% 
+  "2021", "", "Mahoney, M. J.,", "Beier, C. M., and Ackerman, A. C.", "Interactive 3D visualizations of environmental data using the terrainr R package.", "Workshop organized at the Visual Resources Stewardship Conference, Syracuse, NY (Virtual)", "") %>% 
   brief_entries(glue::glue("<BeforeYou> \\textbf{<You>} <AfterYou> <Title> <Details>. \\url{<url>}", 
                            .open = "<", 
                            .close = ">"), 
@@ -150,16 +162,14 @@ tribble(
 
 ```{r talks}
 tribble(
-  ~ When, ~ Title, ~ Details, ~ url,
-  "2021", "Broad-scale forest biomass mapping: generating contiguous high-resolution predictions using a spatio-temporal patchwork of LiDAR coverages across a mixed-use landscape", "Johnson, L. K., Mahoney, M. J., Bevilacqua, E., and Beier, C. M. American Geophysical Union Fall Meeting, New Orleans, LA.", "",
-  "2021", "Greening Up Before Growing Up: Challenges in Modeling Forest Biomass Recovery Post-Harvest Using Satellite Imagery.", "Johnson, L. K., Beier, C. M., and Mahoney, M. J. Society of American Foresters National Convention. Virtual.", "",
-  "2021", "Interactive 3D visualizations of environmental data using the terrainr R package.", "Mahoney, M. J., and Beier, C. M., and Ackerman, A. C. Paper presented at the Visual Resources Stewardship Conference, Syracuse, NY (Virtual).", "",
-  "2021", "Virtual Environments: Using R as a Frontend for 3D Rendering of Digital Landscapes",  "Mahoney, M. J., and Beier, C. M., and Ackerman, A. C. useR! 2021, Zürich, Switzerland (Virtual).", "",
-  "2018", "Beaver Foraging Preferences and Impacts on Forest Structure in the Adirondack Mountains of New York.", 
-  "Mahoney, M. J., and Stella, J. C. Forest Ecosystem Monitoring Collective Conference, Burlington, VT.", "", 
-  "2018","Beaver Foraging Preferences and Impacts on Forest Structure in the Adirondack Mountains of New York.", 
-  "Mahoney, M. J., and Stella, J. C. Rochester Academy of Sciences Fall Scientific Paper Session, Geneseo, NY.", "") %>% 
-  brief_entries(glue::glue("\\textbf{<Title>} <Details> \\newline \\url{<url>}", 
+  ~ When, ~ BeforeYou, ~ You, ~ AfterYou, ~ Title, ~ Details, ~ url,
+  "2021", "Johnson, L. K.,", "Mahoney, M. J.,", "Bevilacqua, E., and Beier, C. M.", "Broad-scale forest biomass mapping: generating contiguous high-resolution predictions using a spatio-temporal patchwork of LiDAR coverages across a mixed-use landscape", " American Geophysical Union Fall Meeting, New Orleans, LA", "",
+  "2021", "Johnson, L. K., Beier, C. M., and", "Mahoney, M. J.", "", "Greening Up Before Growing Up: Challenges in Modeling Forest Biomass Recovery Post-Harvest Using Satellite Imagery", "Society of American Foresters National Convention. Virtual", "",
+  "2021", "", "Mahoney, M. J.,", "Beier, C. M., and Ackerman, A. C.", "Interactive 3D visualizations of environmental data using the terrainr R package", "Paper presented at the Visual Resources Stewardship Conference, Syracuse, NY (Virtual)", "",
+  "2021", "", "Mahoney, M. J., ", "Beier, C. M., and Ackerman, A. C.", "Virtual Environments: Using R as a Frontend for 3D Rendering of Digital Landscapes",  "useR! 2021, Zürich, Switzerland (Virtual)", "",
+  "2018", "", "Mahoney, M. J.", " and Stella, J. C. ", "Beaver Foraging Preferences and Impacts on Forest Structure in the Adirondack Mountains of New York", "Forest Ecosystem Monitoring Collective Conference, Burlington, VT", "", 
+  "2018", "", "Mahoney, M. J.", " and Stella, J. C. ", "Beaver Foraging Preferences and Impacts on Forest Structure in the Adirondack Mountains of New York", "Rochester Academy of Sciences Fall Scientific Paper Session, Geneseo, NY", "") %>% 
+  brief_entries(glue::glue("<BeforeYou> \\textbf{<You>} <AfterYou> <Title>. <Details>. \\url{<url>}", 
                            .open = "<", 
                            .close = ">"), 
                 When, 
@@ -170,20 +180,15 @@ tribble(
 
 ```{r}
 tribble(
-  ~ When, ~ Title, ~ Details, ~ url,
-  "2021", "Filtering ground noise from LiDAR returns produces inferior models of forest aboveground biomass.", "Mahoney, M. J., Johnson, L. K., Bevilacqua, E., and Beier, C. M. American Geophysical Union Fall Meeting, New Orleans, LA.", "",
-  "2019", "Nutritional Impacts on Invasive Beech Scale Quantification in Beech Bark Disease Aftermath Forests.", 
-  "Dillon, G., Mahoney, M. J., Chase, S., and Johnston, M. New York Society of American Foresters Annual Meeting, Syracuse, NY.", "",
-  "2018", "Impacts of Beaver on Forest Structure and Composition.", 
-  "Mahoney, M. J., Zevin, R., and Stella, J.C. Spotlight on Student Research, Syracuse, NY.", "",
-  "2018", "Impacts of Fertilization on Causal Organisms of Beech Bark Disease.", 
-  "Mahoney, M. J., Leimanis, V., Desrochers, M. L., Giambona, B., Johnston, M. T., Yanai, R. D., and Dillon, G. A. Spotlight on Student Research, Syracuse, NY.", "",
-  "2017", "An Investigation of Nutritional Effects on Beech Bark Disease Causal Organisms.", 
-  "Lasser, G. A., Johnston, M., Mahoney, M., Leimanis, V., and Stoodley, J. Forest Ecosystem Monitoring Collective Conference, Burlington, VT.", "",
-  "2017", "An Investigation of Nutritional Effects on Beech Bark Disease Causal Organisms.", 
-  "Lasser, G. A., Johnston, M., Mahoney, M., Leimanis, V., and Stoodley, J. Poster session presented at the Rochester Academy of Sciences Fall Scientific Paper Session, Rochester, NY.", ""
+  ~ When, ~ BeforeYou, ~ You, ~ AfterYou, ~ Title, ~ Details, ~ url,
+  "2021", "", "Mahoney, M. J.,", " Johnson, L. K., Bevilacqua, E., and Beier, C. M.", "Filtering ground noise from LiDAR returns produces inferior models of forest aboveground biomass.", "American Geophysical Union Fall Meeting, New Orleans, LA", "",
+  "2019", "Dillon, G.,", "Mahoney, M. J.,", "Chase, S., and Johnston, M.", "Nutritional Impacts on Invasive Beech Scale Quantification in Beech Bark Disease Aftermath Forests.", "New York Society of American Foresters Annual Meeting, Syracuse, NY", "",
+  "2018", "", "Mahoney, M. J.,", "Zevin, R., and Stella, J.C.", "Impacts of Beaver on Forest Structure and Composition.", "Spotlight on Student Research, Syracuse, NY", "",
+  "2018", "", "Mahoney, M. J.,", "Leimanis, V., Desrochers, M. L., Giambona, B., Johnston, M. T., Yanai, R. D., and Dillon, G. A.", "Impacts of Fertilization on Causal Organisms of Beech Bark Disease.", "Spotlight on Student Research, Syracuse, NY", "",
+  "2017", "Lasser, G. A., Johnston, M.,", "Mahoney, M.,", "Leimanis, V., and Stoodley, J.", "An Investigation of Nutritional Effects on Beech Bark Disease Causal Organisms.", "Forest Ecosystem Monitoring Collective Conference, Burlington, VT", "",
+  "2017", "Lasser, G. A., Johnston, M.,", "Mahoney, M.,", "Leimanis, V., and Stoodley, J.", "An Investigation of Nutritional Effects on Beech Bark Disease Causal Organisms.", "Poster session presented at the Rochester Academy of Sciences Fall Scientific Paper Session, Rochester, NY", ""
 ) %>% 
-  brief_entries(glue::glue("\\textbf{<Title>} <Details> \\newline \\url{<url>}", 
+  brief_entries(glue::glue("<BeforeYou> \\textbf{<You>} <AfterYou> <Title> <Details>. \\url{<url>}", 
                            .open = "<", 
                            .close = ">"), 
                 When, 
@@ -202,7 +207,7 @@ tribble(
 ```{r research}
 tribble(
   ~ When, ~ Lab, ~ Role,
-  "2020-Present", "Climate And Applied Forest Research Institute, SUNY-ESF", "Research Assistant"
+  "2020-Present", "Climate And Applied Forest Research Institute (SUNY-ESF)", "Research Assistant"
 ) %>% 
   brief_entries(glue::glue("\\textbf{<Lab>} \\newline{}<Role>", 
                            .open = "<", 
@@ -222,7 +227,7 @@ tribble(
   ~ When, ~ Title, ~ Role,
   "Fall 2021", "Machine Learning Concepts and Applications", "Instructor of Record"
 ) %>% 
-  brief_entries(glue::glue("\\textbf{<Title>}. <Role>. <When>", 
+  brief_entries(glue::glue("\\textbf{<Title>}. <Role>. <When>.", 
                            .open = "<", 
                            .close = ">"),
                 .protect = FALSE)
@@ -251,6 +256,20 @@ tribble(
 # This is one location where slight elaboration is possible, 
 # if the research was a team effort on a complex, multi-year theme.  
 # One detailed sentence should suffice.  
+```
+
+# Service To Profession
+
+```{r}
+tribble(
+  ~ When, ~ Title, ~ Details, ~ url,
+  "2022 - Present", "Data Carpentry Geospatial Curriculum Advisory Committee", "Member", ""
+) %>% 
+  brief_entries(glue::glue("\\textbf{<Title>}. <Details>. \\url{<url>}", 
+                           .open = "<", 
+                           .close = ">"), 
+                When, 
+                .protect = FALSE)
 ```
 
 
