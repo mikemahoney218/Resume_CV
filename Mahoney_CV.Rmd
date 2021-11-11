@@ -60,7 +60,7 @@ tribble(
   ~ When, ~ BeforeYou, ~ You, ~ AfterYou, ~ Title, ~ Details, ~ url,
   "2021", "Tamiminia, H., Salehi, B., Mahdianpari, M., Beier, C. M., Johnson, L. K., Phoenix, D. B., and", "Mahoney, M. J.", " In Review.", "", "Decision tree-based machine learning models for above-ground biomass estimation using multi-source remote sensing data and object-based image analysis. In review at Geocarto International", "",
   "2021", "", "Mahoney, M. J.,", "Johnson, J. K., Bevilacqua, E., and Beier, C. M. In Review.", "Ground noise filtering produces inferior models of forest aboveground biomass.", "In review at Remote Sensing of Environment", "",
-  "2021", "", "Mahoney, M. J.,", "Beier, C. M., and Ackerman, A. C. In Review.", "Interactive 3D visualizations of geospatial data using the terrainr R package.", "In review at Environmental Modeling and Software", ""
+  "2021", "", "Mahoney, M. J.,", "Beier, C. M., and Ackerman, A. C. In Review.", "Interactive 3D visualizations of geospatial data using the terrainr R package.", "In review at IEEE Computer Graphics and Applications", ""
 ) %>% 
   brief_entries(glue::glue("<BeforeYou> \\textbf{<You>} <AfterYou> <Title> <Details>. \\url{<url>}", 
                            .open = "<", 
