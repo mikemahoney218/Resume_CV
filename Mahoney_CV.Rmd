@@ -165,7 +165,7 @@ tribble(
 ```{r conference_sessions}
 tribble(
   ~ When, ~ BeforeYou, ~ You, ~ AfterYou, ~ Title, ~ Details, ~ url,
-  "2022", "Sun, Z., Rao, Y., and", "Mahoney, M. J.", "", 'Improving "FAIRness" and "Fairness" of AI/ML in Geoscience.', "Session organized at the Federation of Earth Science Information Partners (ESIP) January Meeting, Annapolis, MD (Virtual)", "") %>% 
+  "2022", "Sun, Z., Rao, Y.,", "Mahoney, M. J.,", "Lin, C., and Burgess, A.", 'Improving "FAIRness" and "Fairness" of AI/ML in Geoscience.', "Session organized at the Federation of Earth Science Information Partners (ESIP) January Meeting, Annapolis, MD (Virtual)", "") %>% 
   brief_entries(glue::glue("<BeforeYou> \\textbf{<You>} <AfterYou> <Title> <Details>. \\url{<url>}", 
                            .open = "<", 
                            .close = ">"), 
