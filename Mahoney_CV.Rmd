@@ -191,8 +191,9 @@ tribble(
 ```{r talks}
 tribble(
   ~ When, ~ BeforeYou, ~ You, ~ AfterYou, ~ Title, ~ Details, ~ url,
-  "2021", "Johnson, L. K.,", "Mahoney, M. J.,", "Bevilacqua, E., and Beier, C. M.", "Broad-scale forest biomass mapping: generating contiguous high-resolution predictions using a spatio-temporal patchwork of LiDAR coverages across a mixed-use landscape", " American Geophysical Union Fall Meeting, New Orleans, LA", "",
-  "2021", "Johnson, L. K., Beier, C. M., and", "Mahoney, M. J.", "", "Greening Up Before Growing Up: Challenges in Modeling Forest Biomass Recovery Post-Harvest Using Satellite Imagery", "Society of American Foresters National Convention. Virtual", "",
+  "2022", "", "Mahoney, M. J.", "", "It's not what it looks like: learning to question assumptions when debugging ML models", "Data Mishaps Night, Virtual", "",
+  "2021", "Johnson, L. K.,", "Mahoney, M. J.,", "Bevilacqua, E., and Beier, C. M.", "Broad-scale forest biomass mapping: generating contiguous high-resolution predictions using a spatio-temporal patchwork of LiDAR coverages across a mixed-use landscape", "American Geophysical Union Fall Meeting, New Orleans, LA", "",
+  "2021", "Johnson, L. K., Beier, C. M., and", "Mahoney, M. J.", "", "Greening Up Before Growing Up: Challenges in Modeling Forest Biomass Recovery Post-Harvest Using Satellite Imagery", "Society of American Foresters National Convention, Virtual", "",
   "2021", "", "Mahoney, M. J.,", "Beier, C. M., and Ackerman, A. C.", "Interactive 3D visualizations of environmental data using the terrainr R package", "Paper presented at the Visual Resources Stewardship Conference, Syracuse, NY (Virtual)", "",
   "2021", "", "Mahoney, M. J., ", "Beier, C. M., and Ackerman, A. C.", "Virtual Environments: Using R as a Frontend for 3D Rendering of Digital Landscapes",  "useR! 2021, Zürich, Switzerland (Virtual)", "",
   "2018", "", "Mahoney, M. J.", " and Stella, J. C. ", "Beaver Foraging Preferences and Impacts on Forest Structure in the Adirondack Mountains of New York", "Forest Ecosystem Monitoring Collective Conference, Burlington, VT", "", 
@@ -343,6 +344,7 @@ tribble(
 ```{r packages}
 tribble(
   ~ Pkg, ~ When, ~ Role, ~ Details,
+  "unifir", "2022", "Lead developer", "A Unifying API for working with Unity in R",
   "terrainr", "2021", "Lead developer", "Retrieve Data from the USGS National 
   Map and Transform it for 3D Landscape Visualizations.",
   "heddlr", "2020", "Lead developer", "Tools to enable functional programming 
