@@ -73,6 +73,7 @@ tribble(
 ```{r}
 tribble(
   ~ When, ~ BeforeYou, ~ You, ~ AfterYou, ~ Title, ~ Details, ~ url,
+  "2022", "Tamiminia, H., Salehi, B., Mahdianpari, M., Beier, C. M., Johnson, L. K., Phoenix, D. B., and", "Mahoney, M. J.", "In Press.", "Decision tree-based machine learning models for above-ground biomass estimation using multi-source remote sensing data and object-based image analysis", "Geocarto International", "https://doi.org/10.1080/10106049.2022.2071475",
   "2022", "", "Mahoney, M. J.,", "Beier, C. M., and Ackerman, A. C.", "terrainr: An R package for creating immersive virtual environments.", "Journal of Open Source Software, 7(69), 4060", "https://doi.org/10.21105/joss.04060",
   "2020", "", "Mahoney, M. J.", "and Stella, J. C. 2020.",
   "Stem size selectivity is stronger than species preferences for beaver, a central place forager.", 
@@ -134,6 +135,8 @@ brief_entries(Fellowships, What, When)
 # funder, institutional location recieved at, year span
 ```
 
+\newpage{}
+
 # Invited Talks
 
 ```{r invited}
@@ -149,8 +152,6 @@ tribble(
                 When, 
                 .protect = FALSE)
 ```
-
-\newpage{} 
 
 # Conference Activity
 
@@ -207,6 +208,8 @@ tribble(
                 .protect = FALSE)
 ```
 
+\newpage{} 
+
 ## Poster Presentations
 
 ```{r}
@@ -232,7 +235,6 @@ tribble(
 # No guest lectures, that's padding
 ```
 
-\newpage{} 
 
 # Research Experience
 
@@ -358,6 +360,8 @@ tribble(
 ```{r, eval = FALSE}
 # Media Coverage. [Optional.] Coverage of your work by the media.
 ```
+
+\newpage{}
 
 # Software Development
 
