@@ -192,8 +192,9 @@ tribble(
 ```{r talks}
 tribble(
   ~ When, ~ BeforeYou, ~ You, ~ AfterYou, ~ Title, ~ Details, ~ url,
-  "2022", "", "Mahoney, M. J.", "Beier, C. M., and Ackerman, A. C.", "unifir: A Unifying API for Working with Unity in R", "useR! 2022, Nashville, Tennessee (Virtual)", "", 
-  "2022", "", "Mahoney, M. J.", "Johnson L. K., Bevilacqua E., and Beier C. M.", "Filtering ground noise from LiDAR returns produces inferior models of forest aboveground biomass", "North American Forest Ecology Workshop, Sault Ste Marie, Ontario (Virtual)", "",
+  "2022", "", "Mahoney, M. J.,", "Johnson, L. K., and Beier, C. M.", "Detecting regenerating forestland at a landscape level", "Ecological Society of America and Canadian Society for Ecology and Evolution Joint Annual Meeting, Montreal, Quebec, Canada", "", 
+  "2022", "", "Mahoney, M. J.,", "Beier, C. M., and Ackerman, A. C.", "unifir: A Unifying API for Working with Unity in R", "useR! 2022, Nashville, Tennessee (Virtual)", "", 
+  "2022", "", "Mahoney, M. J.,", "Johnson L. K., Bevilacqua E., and Beier C. M.", "Filtering ground noise from LiDAR returns produces inferior models of forest aboveground biomass", "North American Forest Ecology Workshop, Sault Ste Marie, Ontario (Virtual)", "",
   "2022", "", "Mahoney, M. J.", "", "It's not what it looks like: learning to question assumptions when debugging ML models", "Data Mishaps Night, Virtual", "",
   "2021", "Johnson, L. K.,", "Mahoney, M. J.,", "Bevilacqua, E., and Beier, C. M.", "Broad-scale forest biomass mapping: generating contiguous high-resolution predictions using a spatio-temporal patchwork of LiDAR coverages across a mixed-use landscape", "American Geophysical Union Fall Meeting, New Orleans, LA", "",
   "2021", "Johnson, L. K., Beier, C. M., and", "Mahoney, M. J.", "", "Greening Up Before Growing Up: Challenges in Modeling Forest Biomass Recovery Post-Harvest Using Satellite Imagery", "Society of American Foresters National Convention, Virtual", "",
