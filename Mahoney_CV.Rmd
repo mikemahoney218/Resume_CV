@@ -58,7 +58,7 @@ make_detailed_section(BS_ESF_18, order = 1:4)
 ```{r}
 tribble(
   ~ When, ~ BeforeYou, ~ You, ~ AfterYou, ~ Title, ~ Details, ~ url,
-  "2022", "", "Mahoney, M. J.,", "Beier, C. M., and Ackerman, A. C.", "unifir: A Unifying API for Interacting with Unity from R", "In review at Journal of Open Source Software", "", 
+  "2022", "", "Mahoney, M. J.,", "Beier, C. M., and Ackerman, A. C. In Review.", "unifir: A Unifying API for Interacting with Unity from R.", "In review at Journal of Open Source Software", "", 
   "2022", "", "Mahoney, M. J.,", "Johnson, J. K., and Beier, C. M. In Review.", "Classification and mapping of low-statured 'shrubland' cover types in post-agricultural landscapes of the US Northeast.", "In review at Landscape Ecology", "",
   "2022", "", "Mahoney, M. J.,", "Johnson, J. K., Bevilacqua, E., and Beier, C. M. In Review.", "Ground noise filtering produces inferior models of forest aboveground biomass.", "In review at GIScience and Remote Sensing", "https://doi.org/10.31223/X5HG99"
   
