@@ -58,7 +58,6 @@ make_detailed_section(BS_ESF_18, order = 1:4)
 ```{r}
 tribble(
   ~ When, ~ BeforeYou, ~ You, ~ AfterYou, ~ Title, ~ Details, ~ url,
-  "2022", "", "Mahoney, M. J.,", "Beier, C. M., and Ackerman, A. C. In Review.", "unifir: A Unifying API for Interacting with Unity from R.", "In review at Journal of Open Source Software", "", 
   "2022", "", "Mahoney, M. J.,", "Johnson, J. K., and Beier, C. M. In Review.", "Classification and mapping of low-statured 'shrubland' cover types in post-agricultural landscapes of the US Northeast.", "In review at Landscape Ecology", "https://arxiv.org/abs/2205.05047",
   "2022", "", "Mahoney, M. J.,", "Johnson, J. K., Bevilacqua, E., and Beier, C. M. In Review.", "Ground noise filtering produces inferior models of forest aboveground biomass.", "In review at GIScience and Remote Sensing", "https://doi.org/10.31223/X5HG99"
   
@@ -75,8 +74,9 @@ tribble(
 ```{r}
 tribble(
   ~ When, ~ BeforeYou, ~ You, ~ AfterYou, ~ Title, ~ Details, ~ url,
-  "2022", "Tamiminia, H., Salehi, B., Mahdianpari, M., Beier, C. M., Johnson, L. K., Phoenix, D. B., and", "Mahoney, M. J.", "In Press.", "Decision tree-based machine learning models for above-ground biomass estimation using multi-source remote sensing data and object-based image analysis", "Geocarto International", "https://doi.org/10.1080/10106049.2022.2071475",
-  "2022", "", "Mahoney, M. J.,", "Beier, C. M., and Ackerman, A. C.", "terrainr: An R package for creating immersive virtual environments.", "Journal of Open Source Software, 7(69), 4060", "https://doi.org/10.21105/joss.04060",
+  "2022", "", "Mahoney, M. J.,", "Beier, C. M., and Ackerman, A. C. 2022.", "unifir: A Unifying API for Interacting with Unity from R.", "Journal of Open Source Software, 7(73), 4388", "https://doi.org/10.21105/joss.04388", 
+  "2022", "Tamiminia, H., Salehi, B., Mahdianpari, M., Beier, C. M., Johnson, L. K., Phoenix, D. B., and", "Mahoney, M. J.", "2022.", "Decision tree-based machine learning models for above-ground biomass estimation using multi-source remote sensing data and object-based image analysis.", "Geocarto International", "https://doi.org/10.1080/10106049.2022.2071475",
+  "2022", "", "Mahoney, M. J.,", "Beier, C. M., and Ackerman, A. C. 2022.", "terrainr: An R package for creating immersive virtual environments.", "Journal of Open Source Software, 7(69), 4060", "https://doi.org/10.21105/joss.04060",
   "2020", "", "Mahoney, M. J.", "and Stella, J. C. 2020.",
   "Stem size selectivity is stronger than species preferences for beaver, a central place forager.", 
   "Forest Ecology and Management, 475, 118331", "https://doi.org/10.1016/j.foreco.2020.118331",
@@ -168,6 +168,7 @@ tribble(
 ```{r conference_sessions}
 tribble(
   ~ When, ~ BeforeYou, ~ You, ~ AfterYou, ~ Title, ~ Details, ~ url,
+  "2022", "Sun, Z., and,", "Mahoney, M. J.", "", "AI for All People: How to Make AI Useful for Earth Science Applications?", "Session organized at the Federation of Earth Science Information Partners (ESIP) July Meeting, Pittsburgh, PA", "",
   "2022", "Sun, Z., Rao, Y.,", "Mahoney, M. J.,", "Lin, C., and Burgess, A.", 'Improving "FAIRness" and "Fairness" of AI/ML in Geoscience.', "Session organized at the Federation of Earth Science Information Partners (ESIP) January Meeting, Annapolis, MD (Virtual)", "") %>% 
   brief_entries(glue::glue("<BeforeYou> \\textbf{<You>} <AfterYou> <Title> <Details>. \\url{<url>}", 
                            .open = "<", 
