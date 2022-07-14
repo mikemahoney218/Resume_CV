@@ -59,10 +59,8 @@ make_detailed_section(BS_ESF_18, order = 1:4)
 tribble(
   ~ When, ~ BeforeYou, ~ You, ~ AfterYou, ~ Title, ~ Details, ~ url,
   "2022", "Johnson, L. K.,", "Mahoney, M. J.,", "Bevilacqua, E., Stehman, S. V., Domke, G. M., and Beier, C. M. In Review.", "High-resolution landscape-scale biomass mapping using a spatiotemporal patchwork of LiDAR coverages", "In review at Environmental Research Letters", "https://doi.org/10.48550/arXiv.2205.08530",
-  "2022", "", "Mahoney, M. J.,", "Johnson, J. K., and Beier, C. M. In Review.", "Classification and mapping of low-statured 'shrubland' cover types in post-agricultural landscapes of the US Northeast.", "In review at Landscape Ecology", "https://doi.org/10.48550/arXiv.2205.05047",
-  "2022", "", "Mahoney, M. J.,", "Johnson, J. K., Bevilacqua, E., and Beier, C. M. In Review.", "Ground noise filtering produces inferior models of forest aboveground biomass.", "In review at GIScience and Remote Sensing", "https://doi.org/10.31223/X5HG99"
-  
-) %>% 
+  "2022", "", "Mahoney, M. J.,", "Johnson, J. K., and Beier, C. M. In Review.", "Classification and mapping of low-statured 'shrubland' cover types in post-agricultural landscapes of the US Northeast.", "In review at Landscape Ecology", "https://doi.org/10.48550/arXiv.2205.05047"
+  ) %>% 
   brief_entries(glue::glue("<BeforeYou> \\textbf{<You>} <AfterYou> <Title> <Details>. \\url{<url>}", 
                            .open = "<", 
                            .close = ">"), 
@@ -75,6 +73,7 @@ tribble(
 ```{r}
 tribble(
   ~ When, ~ BeforeYou, ~ You, ~ AfterYou, ~ Title, ~ Details, ~ url,
+  "2022", "", "Mahoney, M. J.,", "Johnson, J. K., Bevilacqua, E., and Beier, C. M. In Press.", "Ground noise filtering produces inferior models of forest aboveground biomass.", "In review at GIScience and Remote Sensing", "https://doi.org/10.31223/X5HG99",
   "2022", "", "Mahoney, M. J.,", "Beier, C. M., and Ackerman, A. C. 2022.", "unifir: A Unifying API for Interacting with Unity from R.", "Journal of Open Source Software, 7(73), 4388", "https://doi.org/10.21105/joss.04388", 
   "2022", "Tamiminia, H., Salehi, B., Mahdianpari, M., Beier, C. M., Johnson, L. K., Phoenix, D. B., and", "Mahoney, M. J.", "2022.", "Decision tree-based machine learning models for above-ground biomass estimation using multi-source remote sensing data and object-based image analysis.", "Geocarto International", "https://doi.org/10.1080/10106049.2022.2071475",
   "2022", "", "Mahoney, M. J.,", "Beier, C. M., and Ackerman, A. C. 2022.", "terrainr: An R package for creating immersive virtual environments.", "Journal of Open Source Software, 7(69), 4060", "https://doi.org/10.21105/joss.04060",
@@ -373,6 +372,8 @@ tribble(
 ```{r packages}
 tribble(
   ~ Pkg, ~ When, ~ Role, ~ Details,
+  "waywiser", "2022", "Lead developer", "Infrastructure for assessing spatial autocorrelation in model residuals",
+  "rsample", "2022", "Developer", "Data resampling infrastructure for model evaluation",
   "spatialsample", "2022", "Developer", "Functions for spatial resampling with the 'rsample' package", 
   "unifir", "2022", "Lead developer", "A Unifying API for working with Unity in R",
   "terrainr", "2021", "Lead developer", "Retrieve Data from the USGS National 
