@@ -1,13 +1,15 @@
 ---
 surname: Mike Mahoney
-address: "Analyst, Wayfair Inc."
+address: "" # Subhead under name 
 phone: 781-812-8842
-www: mikemahoney218.com
+www: mm218.dev
 email: "mike.mahoney.218@gmail.com"
 github: mikemahoney218
 linkedin: mikemahoney218
 date: "`r format(Sys.time(), '%B %Y')`"
-output: vitae::awesomecv
+output: 
+  vitae::awesomecv:
+    keep_tex: TRUE
 docname: "Resume"
 headcolor: 414141 #08004f
 ---
@@ -19,71 +21,90 @@ library(tibble)
 source("make_detailed_section.R")
 ```
 
+
 # Work Experience
 ```{r}
 ## To reflect promotions, simply change the "with" and "where" arguments to "" -
 ## that'll keep everything grouped under the same header
+RStudio_2022 <- vector("list")
+RStudio_2022$Details <- c("Open Source Engineer", "May 2022 - August 2022", "Posit, PBC (Previously RStudio, PBC) - Internship", "Boston, MA (Remote)")
+RStudio_2022$Bullets <- c(
+  "Developed open-source packages for the R programming language, with a focus on enabling good practices in machine learning and statistical modeling.",
+  "Designed and implemented the \"spatialsample\" package, providing utilities for spatial cross-validation; \"waywiser\", providing tools to assess spatial autocorrelation in model residuals, and implemented grouped resampling methods in the \"rsample\" package, the most requested feature in a package with more than 2 million total downloads.",
+  "Wrote public-facing documentation to explain complex statistical and technical concepts to users from a wide variety of backgrounds, including articles on spatial buffers for spatial cross-validation, a general overview of cross-validation approaches for modeling purposes, and tutorials on how to use open-source tooling to assess models across multiple spatial scales.",
+  "Implemented key computations in C++, speeding up package functionality by up to 50%."
+  
+  )
+
+ESIP_2022 <- vector("list")
+ESIP_2022$Details <- c("Community Fellow (Machine Learning)", "December 2021 - Present", "Federation of Earth Science Information Partners (ESIP) - Part Time", "Severna Park, MD (Remote)")
+ESIP_2022$Bullets <- c(
+  "Organized and assisted with monthly meetings of the ESIP Machine Learning cluster, an organization of Earth scientists from NASA, NOAA, USGS, and academic institutions.",
+  "Assisted inter-agency focus group in setting priorities for the use of machine learning in Earth science across federal agencies, including both potential applications and best practices.", 
+  "Assisted in organizing both the 2022 ESIP January Meeting and a conference session \"Advancing FAIRness and Fairness in AI/ML in the Geo-sciences\"."
+  )
+
+CAFRI_2020 <- vector("list")
+CAFRI_2020$Details <- c("Research Assistant", "August 2020 - Present", "Climate and Applied Forest Research Institute - Academic Year", "Syracuse, NY")
+CAFRI_2020$Bullets <- c(
+  "Created R and Python-based spatial models of forest aboveground biomass as part of New York State's Climate Leadership and Community Protection Act. These models will, pending a current public comment period, be the method New York uses to track carbon sequestration in forests.",
+  "Built cloud-based (AWS) data-delivery infrastructure to enable delivery of spatial data products to private and governmental partners, and to standardize data sharing practices across the Institute.",
+  "Developed and taught \"Machine Learning Concepts and Applications\", a one-semester graduate course on applied machine learning for scientists."
+  )
+
 Wayfair_Analyst_June19 <- vector("list")
-Wayfair_Analyst_June19$Details <- c("Analyst (Workforce Management - Forecasting & Analytics)", "June 2019 - Present", "Wayfair Inc.", "Boston, Massachusetts")
+Wayfair_Analyst_June19$Details <- c("Analyst (Workforce Management - Forecasting & Analytics)", "June 2019 - August 2020", "Wayfair Inc. - Full Time", "Boston, Massachusetts")
 Wayfair_Analyst_June19$Bullets <- c(
   "Developed and launched department's first automated streaming data pipelines, connecting BuildKite, Docker, R, Python and T-SQL in order to create always-up real-time dashboards of contact center production for customer service leadership team.",
   "Implemented process improvements including automating long-standing reporting (transforming monthly reporting into daily updates and increasing the accuracy of analytics) and introducing Git and related workflows to department.",
-  "Demonstrated leadership as interdepartmental liaison between partner teams on matters of reporting methodologies, data availability, and data access.",
+  "Demonstrated leadership as interdepartmental liaison between partner teams on matters of metric definitions, reporting methodologies, data availability, and data access.",
   "Served as department subject-matter expert on technical matters (including R, SQL, Git, and Docker) on projects ranging from automating analytics to developing CI/CD workflows.")
 
-Stella_Researcher_Sep17 <- vector("list")
-Stella_Researcher_Sep17$Details <- c("Independent Researcher", "September 2017 - June 2019", "Stella Riparian and Stream Ecology Laboratory", "Syracuse, New York")
-Stella_Researcher_Sep17$Bullets <- c(
-  "Spearheaded design and implementation of research plan, including data collection from almost 200 field sites, over 2,000 miles of travel by researchers, data analysis, and statistical modeling to predict beaver impacts in complex natural systems, using R, SQL, and ESRI GIS technologies",
-  "Analyzed complex systems through use of statistical modeling and machine learning algorithms developed in R and Python",
-  "Developed intricate data visualizations (using R's ggplot2 and Python's Bokeh) and detailed reports used to inform policy at the state level",
-  "Invited to present results at Rochester Academy of Sciences (November 2018) and Forest Ecosystem Monitoring Collaborative Conference (December 2018)"
-  )
-
-Yanai_Intern_Sep17 <- vector("list")
-Yanai_Intern_Sep17$Details <- c("Research Intern", "September 2017 - April 2019", "Yanai Forest Ecosystem Science Laboratory", "Syracuse, New York")
-Yanai_Intern_Sep17$Bullets <- c(
-  "Analyzed quantitative and qualitative data in R, performing hypothesis testing, statistical estimation, and data visualization using non-parametric statistics in role as data analyst",
-  "Improved data collection speed significantly by creating and implementing novel image analysis methods using developing technologies", 
-  "Presented results at Rochester Academy of Sciences (November 2017), Forest Ecosystem Monitoring Collective Conference (December 2017), and Society of American Foresters (November 2018)"
-  )
-  
-ESF_HOL_Aug16 <- vector("list")
-ESF_HOL_Aug16$Details <- c("Head Orientation Leader", "August 2016 – November 2018", "Office of Student Involvement and Leadership – SUNY-ESF", "Syracuse, New York")
-ESF_HOL_Aug16$Bullets <- c("Hired, trained, and directed 50 orientation leaders in implementing 10-day new student orientation program and semester-long student success series",
-                           "Presented to audiences of up to 1,500 students and family members on various topics chosen to aid in the transition to college",
-                           "Organized year-long interdepartmental planning process for subsequent year's class of incoming students")
-
-make_detailed_section(Wayfair_Analyst_June19, 
-                      Stella_Researcher_Sep17, 
-                      Yanai_Intern_Sep17
-                      , ESF_HOL_Aug16
-                      )
+make_detailed_section(
+  RStudio_2022,
+  ESIP_2022,
+  CAFRI_2020,
+  Wayfair_Analyst_June19)
 ```
 
-# Additional Information
-```{r}
-OtherAccomplishments <- vector("list")
-OtherAccomplishments$Details <- c("Other Accomplishments", NA, NA, NA)
-OtherAccomplishments$Bullets <- c("Develop web application to help juvenile offenders seal or expunge their criminal records, with Code for Boston, and develop data analyses to help advocate for juvenile criminal justice reform with the Center for Juvenile Justice",
-  "Writing on data visualization theory featured in Towards Data Science (2019)")
+# Volunteer Positions
 
+```{r}
+Carpentries <- vector("list")
+Carpentries$Details <- c("Curriculum Advisory Committee Member; Lesson Maintainer; Instructor", "2021-Present", "The Carpentries - Volunteer", "Remote")
+Carpentries$Bullets <- c(
+  "Committee member helping to advise the development of the complete geospatial curriculum of The Carpentries, a nonprofit dedicated to teaching researchers fundamental programming skills.",
+  "Lesson maintainer for \"Introduction to R for Geospatial Data\", responsible for developing, improving, and responding to community feedback on an introductory R workshop for users focused on the skills necessary for working with geospatial data formats.",
+  "Instructor responsible for organizing and leading free programming workshops for early career researchers.")
+
+make_detailed_section(Carpentries)
+```
+
+```{r}
+# Additional Information
 TechnicalSkills <- vector("list")
 TechnicalSkills$Details <- c("Technical Skills", NA, NA, NA)
-TechnicalSkills$Bullets <- c("Proficient in R, Python, SQL, SAS, and Linux shell languages, and combining these langauges to solve multifaceted data science problems",
-  "Experienced with techniques including containerization via Docker, version control via Git, and continuous integrations and deployment via BuildKite and other similar CI/CD solutions")
+TechnicalSkills$Bullets <- c(
+  "Proficient in R, Python, SQL, SAS, and Linux shell languages, and combining these tools to solve multifaceted data science problems",
+  "Five years of experience with spatial analysis and popular GIS tooling, including ArcGIS, QGIS, and the R spatial ecosystem",
+  "Lead developer of terrainr, an R package released as part of the rOpenSci project")
 
-make_detailed_section(TechnicalSkills)
+#make_detailed_section(TechnicalSkills)
 ```
-
 
 # Education
 
-```{r}
-BS_ESF_18 <- vector("list")
-BS_ESF_18$Details <- c("Bachelor of Science with Honors magna cum laude in Forest Ecosystem Science (GPA: 3.723)", "December 2018", "State University of New York College of Environmental Science and Forestry (SUNY-ESF)", "Syracuse, New York")
-BS_ESF_18$Bullets <- c("Awards: Robin Hood Oak Award for Academic Excellence (2018), Robert M. Hicks Award for Academic Achievement (2018), Outstanding Student Award for Accomplishments in Field Ecology and Dendrology (2017), Outstanding Tutor (2016)",
-                       "Independent research presented at: New York Society of American Foresters (2019), Forest Ecosystem Monitoring Collaborative Conference (2017, 2018), Rochester Academy of Sciences (2017, 2018), Spotlight on Student Research (2018)")
+```{r education}
+PHD_ESF_Current <- vector("list")
+PHD_ESF_Current$Details <- c("Doctor of Philosophy in Environmental Science (Area of Study: Coupled Natural and Human Systems)", 
+                       "August 2020 - Present", 
+                       "State University of New York College of Environmental 
+                       Science and Forestry (SUNY-ESF)", 
+                       "Syracuse, New York")
+PHD_ESF_Current$Bullets <- c(
+  "Dissertation: Being There? The Use of Immersive Virtual Environments to Replicate Real-World Experiences in Nature",
+  "Awards: New York State GIS Association Application Award (2021)"
+)
 
-make_detailed_section(BS_ESF_18, order = 1:4)
+make_detailed_section(PHD_ESF_Current, order = 1:4)
 ```
