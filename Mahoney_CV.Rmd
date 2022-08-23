@@ -53,6 +53,8 @@ make_detailed_section(BS_ESF_18, order = 1:4)
 
 # Publications
 
+\vspace{0.2cm}
+
 ## In Review
 
 ```{r}
@@ -68,7 +70,11 @@ tribble(
                 .protect = FALSE)
 ```
 
+\vspace{0.4cm}
+
 ## Peer-Reviewed Publications
+
+### Journal Articles {.unnumbered}
 
 ```{r}
 tribble(
@@ -88,11 +94,13 @@ tribble(
                 .protect = FALSE)
 ```
 
-## Conference Papers
+### Book Chapters and Conference Proceeding Papers {.unnumbered}
 
 ```{r}
 tribble(
   ~ When, ~ BeforeYou, ~ You, ~ AfterYou, ~ Title, ~ Details, ~ url,
+  # Add ISBN once it has one
+    "2022", "", "Mahoney, M. J.,", "Johnson, L. K., and Beier, C. M. In Press.", "AI for Shrubland Identification and Mapping.", " In: Artificial Intelligence in Earth Science: Best Practices and Fundamental Challenges. (Z. Sun, N. Cristea, P. Rivas, Eds). Elsevier, Amsterdam.", "",
     "2021", "", "Mahoney, M. J.,", "Beier, C. M., and Ackerman, A. C. 2021.", "Interactive landscape simulations for visual resource assessment.", "VRSC 2021 Conference Proceedings", ""
 ) %>% 
   brief_entries(glue::glue("<BeforeYou> \\textbf{<You>} <AfterYou> <Title> <Details>. \\url{<url>}", 
@@ -102,6 +110,7 @@ tribble(
                 .protect = FALSE)
 ```
 
+\newpage{}
 
 # Awards and Honors
 
@@ -136,8 +145,6 @@ brief_entries(Fellowships, What, When)
 # Grants and Fellowships
 # funder, institutional location recieved at, year span
 ```
-
-\newpage{}
 
 # Invited Talks
 
@@ -193,6 +200,25 @@ tribble(
 
 ## Contributed Talks
 
+```{r}
+tribble(
+  ~ When, ~ BeforeYou, ~ You, ~ AfterYou, ~ Title, ~ Details, ~ url,
+  "2022", "", "Mahoney, M. J.,", "Johnson, L. K., and Beier, C. M.", "Detecting regenerating forestland at a landscape level", "Ecological Society of America and Canadian Society for Ecology and Evolution Joint Annual Meeting, Montreal, Quebec, Canada", "", 
+  "2022", "", "Mahoney, M. J.,", "Beier, C. M., and Ackerman, A. C.", "unifir: A Unifying API for Working with Unity in R", "useR! 2022, Nashville, Tennessee (Virtual)", "", 
+  "2022", "", "Mahoney, M. J.,", "Johnson L. K., Bevilacqua E., and Beier C. M.", "Filtering ground noise from LiDAR returns produces inferior models of forest aboveground biomass", "North American Forest Ecology Workshop, Sault Ste Marie, Ontario (Virtual)", "",
+  "2022", "", "Mahoney, M. J.", "", "It's not what it looks like: learning to question assumptions when debugging ML models", "Data Mishaps Night, Virtual", "",
+  "2021", "Johnson, L. K.,", "Mahoney, M. J.,", "Bevilacqua, E., and Beier, C. M.", "Broad-scale forest biomass mapping: generating contiguous high-resolution predictions using a spatio-temporal patchwork of LiDAR coverages across a mixed-use landscape", "American Geophysical Union Fall Meeting, New Orleans, LA", "") %>% 
+  brief_entries(glue::glue("<BeforeYou> \\textbf{<You>} <AfterYou> <Title>. <Details>. \\url{<url>}", 
+                           .open = "<", 
+                           .close = ">"), 
+                When, 
+                .protect = FALSE)
+```
+
+\newpage{}
+
+## Contributed Talks (cont.)
+
 ```{r talks}
 tribble(
   ~ When, ~ BeforeYou, ~ You, ~ AfterYou, ~ Title, ~ Details, ~ url,
@@ -212,8 +238,6 @@ tribble(
                 When, 
                 .protect = FALSE)
 ```
-
-\newpage{} 
 
 ## Poster Presentations
 
@@ -255,6 +279,7 @@ tribble(
                 .protect = FALSE)
 ```
 
+\newpage{}
 
 # Teaching Experience
 
@@ -335,7 +360,7 @@ tribble(
   ~ When, ~ Group, ~ Role, ~ Details,
   "2022", "RStudio PBC.", 
   "Open Source Engineering Intern", 
-  "Intern with RStudio's tidymodels team, working on the spatialsample R package for spatial data resampling."
+  "Intern with RStudio's tidymodels team, working on the R packages 'spatialsample' for spatial cross-validation, 'rsample' for resampling and cross-validation, 'waywiser' for measuring spatial autocorrelation in model residuals, and 'applicable' for calculating model applicability domains."
 ) %>% 
   brief_entries(glue::glue(" \\textbf{<Group>} <Role>. \\newline{} <Details>",
                            .open = "<", 
@@ -366,8 +391,6 @@ tribble(
 # Media Coverage. [Optional.] Coverage of your work by the media.
 ```
 
-\newpage{}
-
 # Software Development
 
 ```{r packages}
@@ -375,7 +398,7 @@ tribble(
   ~ Pkg, ~ When, ~ Role, ~ Details,
   "waywiser", "2022", "Lead developer", "Infrastructure for assessing spatial autocorrelation in model residuals",
   "rsample", "2022", "Developer", "Data resampling infrastructure for model evaluation",
-  "spatialsample", "2022", "Developer", "Functions for spatial resampling with the 'rsample' package", 
+  "spatialsample", "2022", "Developer, Maintainer", "Functions for spatial resampling with the 'rsample' package", 
   "unifir", "2022", "Lead developer", "A Unifying API for working with Unity in R",
   "terrainr", "2021", "Lead developer", "Retrieve Data from the USGS National 
   Map and Transform it for 3D Landscape Visualizations.",
