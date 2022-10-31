@@ -78,8 +78,8 @@ tribble(
 ```{r}
 tribble(
   ~ When, ~ BeforeYou, ~ You, ~ AfterYou, ~ Title, ~ Details, ~ url,
-  "2022", "Johnson, L. K.,", "Mahoney, M. J.,", "Bevilacqua, E., Stehman, S. V., Domke, G. M., and Beier, C. M. In Press.", "High-resolution landscape-scale biomass mapping using a spatiotemporal patchwork of LiDAR coverages", "In press at The International Journal of Applied Earth Observation and Geoinformation", "https://doi.org/10.48550/arXiv.2205.08530",
-  "2022", "", "Mahoney, M. J.,", "Johnson, J. K., Bevilacqua, E., and Beier, C. M. 2020.", "Ground noise filtering produces inferior models of forest aboveground biomass.", "GIScience and Remote Sensing 59(1), 1266-1280", "https://doi.org/10.1080/15481603.2022.2103069",
+  "2022", "Johnson, L. K.,", "Mahoney, M. J.,", "Bevilacqua, E., Stehman, S. V., Domke, G. M., and Beier, C. M. 2022.", "Fine-resolution landscape-scale biomass mapping using a spatiotemporal patchwork of LiDAR coverages", "The International Journal of Applied Earth Observation and Geoinformation, 114, 103059", "https://doi.org/10.48550/arXiv.2205.08530",
+  "2022", "", "Mahoney, M. J.,", "Johnson, J. K., Bevilacqua, E., and Beier, C. M. 2020.", "Ground noise filtering produces inferior models of forest aboveground biomass.", "GIScience and Remote Sensing, 59(1), 1266-1280", "https://doi.org/10.1080/15481603.2022.2103069",
   "2022", "", "Mahoney, M. J.,", "Beier, C. M., and Ackerman, A. C. 2022.", "unifir: A Unifying API for Interacting with Unity from R.", "Journal of Open Source Software, 7(73), 4388", "https://doi.org/10.21105/joss.04388", 
   "2022", "Tamiminia, H., Salehi, B., Mahdianpari, M., Beier, C. M., Johnson, L. K., Phoenix, D. B., and", "Mahoney, M. J.", "2022.", "Decision tree-based machine learning models for above-ground biomass estimation using multi-source remote sensing data and object-based image analysis.", "Geocarto International", "https://doi.org/10.1080/10106049.2022.2071475",
   "2022", "", "Mahoney, M. J.,", "Beier, C. M., and Ackerman, A. C. 2022.", "terrainr: An R package for creating immersive virtual environments.", "Journal of Open Source Software, 7(69), 4060", "https://doi.org/10.21105/joss.04060",
@@ -326,7 +326,7 @@ tribble(
 ```{r}
 tribble(
   ~ When, ~ Title, ~ Details, ~ url,
-  "2022", "Reviewer:", "11th International Conference on Climate Informatics.", "",
+  "2022", "Reviewer:", "Journal of Statistical Software; Journal of Open Source Software; 11th International Conference on Climate Informatics.", "",
   "2022 - Present", "Data Carpentry Geospatial Curriculum Advisory Committee.", "Member.", ""
 ) %>% 
   brief_entries(glue::glue("\\textbf{<Title>} <Details> \\url{<url>}", 
