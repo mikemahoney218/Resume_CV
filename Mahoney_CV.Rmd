@@ -55,29 +55,29 @@ make_detailed_section(BS_ESF_18, order = 1:4)
 
 \vspace{0.2cm}
 
+```{r eval = FALSE}
 ## In Review
-
-```{r}
 tribble(
   ~ When, ~ BeforeYou, ~ You, ~ AfterYou, ~ Title, ~ Details, ~ url,
-  "2022", "", "Mahoney, M. J.,", "Johnson, J. K., and Beier, C. M. In Review.", "Classification and mapping of low-statured 'shrubland' cover types in post-agricultural landscapes of the US Northeast.", "In review at The International Journal of Remote Sensing", "https://doi.org/10.48550/arXiv.2205.05047"
+  
   ) %>% 
   brief_entries(glue::glue("<BeforeYou> \\textbf{<You>} <AfterYou> <Title> <Details>. \\url{<url>}", 
                            .open = "<", 
                            .close = ">"), 
                 When, 
                 .protect = FALSE)
-```
+#\vspace{0.4cm}
 
-\vspace{0.4cm}
 
 ## Peer-Reviewed Publications
+```
 
 ### Journal Articles {.unnumbered}
 
 ```{r}
 tribble(
   ~ When, ~ BeforeYou, ~ You, ~ AfterYou, ~ Title, ~ Details, ~ url,
+  "2022", "", "Mahoney, M. J.,", "Johnson, J. K., Guinan, A. Z., and Beier, C. M. 2022.", "Classification and mapping of low-statured 'shrubland' cover types in post-agricultural landscapes of the US Northeast.", "The International Journal of Remote Sensing, 43(19-24), 7117-7138", "https://doi.org/10.1080/01431161.2022.2155086",
   "2022", "Johnson, L. K.,", "Mahoney, M. J.,", "Bevilacqua, E., Stehman, S. V., Domke, G. M., and Beier, C. M. 2022.", "Fine-resolution landscape-scale biomass mapping using a spatiotemporal patchwork of LiDAR coverages", "The International Journal of Applied Earth Observation and Geoinformation, 114, 103059", "https://doi.org/10.1016/j.jag.2022.103059",
   "2022", "", "Mahoney, M. J.,", "Johnson, J. K., Bevilacqua, E., and Beier, C. M. 2022.", "Ground noise filtering produces inferior models of forest aboveground biomass.", "GIScience and Remote Sensing, 59(1), 1266-1280", "https://doi.org/10.1080/15481603.2022.2103069",
   "2022", "", "Mahoney, M. J.,", "Beier, C. M., and Ackerman, A. C. 2022.", "unifir: A Unifying API for Interacting with Unity from R.", "Journal of Open Source Software, 7(73), 4388", "https://doi.org/10.21105/joss.04388", 
@@ -100,7 +100,7 @@ tribble(
 tribble(
   ~ When, ~ BeforeYou, ~ You, ~ AfterYou, ~ Title, ~ Details, ~ url,
   # Add ISBN once it has one
-    "2022", "", "Mahoney, M. J.,", "Johnson, L. K., and Beier, C. M. In Press.", "AI for Shrubland Identification and Mapping.", " In: Artificial Intelligence in Earth Science: Best Practices and Fundamental Challenges. (Z. Sun, N. Cristea, P. Rivas, Eds). Elsevier, Amsterdam.", "",
+    "2023", "", "Mahoney, M. J.,", "Johnson, L. K., and Beier, C. M. In Press.", "AI for Shrubland Identification and Mapping.", " In: Artificial Intelligence in Earth Science: Best Practices and Fundamental Challenges. (Z. Sun, N. Cristea, P. Rivas, Eds). Elsevier, Amsterdam.", "",
     "2021", "", "Mahoney, M. J.,", "Beier, C. M., and Ackerman, A. C. 2021.", "Interactive landscape simulations for visual resource assessment.", "VRSC 2021 Conference Proceedings", ""
 ) %>% 
   brief_entries(glue::glue("<BeforeYou> \\textbf{<You>} <AfterYou> <Title> <Details>. \\url{<url>}", 
@@ -151,6 +151,7 @@ brief_entries(Fellowships, What, When)
 ```{r invited}
 tribble(
   ~ When, ~ BeforeYou, ~ You, ~ AfterYou, ~ Title, ~ Details, ~ url,
+  "2023", "", "Mahoney, M. J.", "", "Make Reproducibility Easy", "Federation of Earth Science Information Partners (ESIP) January Meeting, Annapolis, MD (Virtual)", "", 
   "2022", "", "Mahoney, M. J.", "", "Building trust in AI outputs: Approaches from NY's forest carbon monitoring program.", "Federation of Earth Science Information Partners (ESIP) July Meeting, Pittsburgh, PA", "",
   "2022", "", "Mahoney, M. J.", "", "Using AI/ML to help New York State manage lands for net zero carbon.", "Federation of Earth Science Information Partners (ESIP) January Meeting, Annapolis, MD (Virtual)", "",
   "2021", "", "Mahoney, M. J.", "", "terrainr: Spatial data access and visualization in R.", "Federation of Earth Science Information Partners (ESIP), Severna Park, MD (Virtual)", "",
@@ -176,6 +177,7 @@ tribble(
 ```{r conference_sessions}
 tribble(
   ~ When, ~ BeforeYou, ~ You, ~ AfterYou, ~ Title, ~ Details, ~ url,
+  "2023", "Rao, Y., Sun, Z., Stocks, K.,", "Mahoney, M. J.,", "Redmon, R.", "FAIR for AI in Geoscience: From AI-Ready Data to Practical AI Models", "Session organized at the Federation of Earth Science Information Partners (ESIP) January Meeting, Annapolis, MD (Virtual)", "",
   "2022", "Sun, Z., Ma, M., Burgess, A., Nga, C., Newman, D., Rao, D.,", "Mahoney, M. J.,", "Koren, G., and Kale, A.", "AI for All People: How to Make AI Useful for Earth Science Applications?", "Session organized at the Federation of Earth Science Information Partners (ESIP) July Meeting, Pittsburgh, PA", "",
   "2022", "Sun, Z., Rao, Y.,", "Mahoney, M. J.,", "Lin, C., and Burgess, A.", 'Improving "FAIRness" and "Fairness" of AI/ML in Geoscience.', "Session organized at the Federation of Earth Science Information Partners (ESIP) January Meeting, Annapolis, MD (Virtual)", "") %>% 
   brief_entries(glue::glue("<BeforeYou> \\textbf{<You>} <AfterYou> <Title> <Details>. \\url{<url>}", 
@@ -198,31 +200,20 @@ tribble(
                 .protect = FALSE)
 ```
 
+\newpage{}
+
 ## Contributed Talks
 
 ```{r}
 tribble(
   ~ When, ~ BeforeYou, ~ You, ~ AfterYou, ~ Title, ~ Details, ~ url,
+    "2022", "", "Mahoney, M. J.", "Beier, C. M., and Ackerman, A. C.", "Virtual Environments for Communicating Changing Forests", "Forest Ecosystem Monitoring Collective Conference, Burlington, VT", "", 
+    "2022", "Johnson, L. K.,", "Mahoney, M. J.,", "and Beier, C. M.", "A Map-based Stock Change Approach for Fine-scale Biomass and Carbon Accounting in NYS.", "Forest Ecosystem Monitoring Collective Conference, Burlington, VT", "", 
     "2022", "Johnson, L. K.,", "Mahoney, M. J.,", "and Beier, C. M.", "Historical Time Series Biomass Modeling: To Train on Plots or Pixels?", "American Geophysical Union Fall Meeting, Chicago, IL", "",
   "2022", "", "Mahoney, M. J.,", "Johnson, L. K., and Beier, C. M.", "Detecting regenerating forestland at a landscape level", "Ecological Society of America and Canadian Society for Ecology and Evolution Joint Annual Meeting, Montreal, Quebec, Canada", "", 
   "2022", "", "Mahoney, M. J.,", "Beier, C. M., and Ackerman, A. C.", "unifir: A Unifying API for Working with Unity in R", "useR! 2022, Nashville, Tennessee (Virtual)", "", 
   "2022", "", "Mahoney, M. J.,", "Johnson L. K., Bevilacqua E., and Beier C. M.", "Filtering ground noise from LiDAR returns produces inferior models of forest aboveground biomass", "North American Forest Ecology Workshop, Sault Ste Marie, Ontario (Virtual)", "",
   "2022", "", "Mahoney, M. J.", "", "It's not what it looks like: learning to question assumptions when debugging ML models", "Data Mishaps Night, Virtual", "",
-) %>% 
-  brief_entries(glue::glue("<BeforeYou> \\textbf{<You>} <AfterYou> <Title>. <Details>. \\url{<url>}", 
-                           .open = "<", 
-                           .close = ">"), 
-                When, 
-                .protect = FALSE)
-```
-
-\newpage{}
-
-## Contributed Talks (cont.)
-
-```{r talks}
-tribble(
-  ~ When, ~ BeforeYou, ~ You, ~ AfterYou, ~ Title, ~ Details, ~ url,
   "2021", "Johnson, L. K.,", "Mahoney, M. J.,", "Bevilacqua, E., and Beier, C. M.", "Broad-scale forest biomass mapping: generating contiguous high-resolution predictions using a spatio-temporal patchwork of LiDAR coverages across a mixed-use landscape", "American Geophysical Union Fall Meeting, New Orleans, LA", "",
   "2021", "Johnson, L. K., Beier, C. M., and", "Mahoney, M. J.", "", "Greening Up Before Growing Up: Challenges in Modeling Forest Biomass Recovery Post-Harvest Using Satellite Imagery", "Society of American Foresters National Convention, Virtual", "",
   "2021", "", "Mahoney, M. J.,", "Beier, C. M., and Ackerman, A. C.", "Interactive 3D visualizations of environmental data using the terrainr R package", "Paper presented at the Visual Resources Stewardship Conference, Syracuse, NY (Virtual)", "",
@@ -241,6 +232,7 @@ tribble(
 ```{r}
 tribble(
   ~ When, ~ BeforeYou, ~ You, ~ AfterYou, ~ Title, ~ Details, ~ url,
+  "2022", "Woodley, M.", "Mahoney, M. J.,", " Beier, C. M., and Tuttle, S. E.", "Spatiotemporal Dynamics of Snowpack in a Forested Watershed in the Adirondack Mountains, NY", "American Geophysical Union Fall Meeting, Chicago, IL", "",
   "2021", "", "Mahoney, M. J.,", " Johnson, L. K., Bevilacqua, E., and Beier, C. M.", "Filtering ground noise from LiDAR returns produces inferior models of forest aboveground biomass.", "American Geophysical Union Fall Meeting, New Orleans, LA", "",
   "2019", "Dillon, G.,", "Mahoney, M. J.,", "Chase, S., and Johnston, M.", "Nutritional Impacts on Invasive Beech Scale Quantification in Beech Bark Disease Aftermath Forests.", "New York Society of American Foresters Annual Meeting, Syracuse, NY", "",
   "2018", "", "Mahoney, M. J.,", "Zevin, R., and Stella, J.C.", "Impacts of Beaver on Forest Structure and Composition.", "Spotlight on Student Research, Syracuse, NY", "",
@@ -261,6 +253,7 @@ tribble(
 # No guest lectures, that's padding
 ```
 
+\newpage{}
 
 # Research Experience
 
@@ -314,8 +307,6 @@ tribble(
 # if the research was a team effort on a complex, multi-year theme.  
 # One detailed sentence should suffice.  
 ```
-
-\newpage{}
 
 # Service To Profession
 
@@ -410,6 +401,8 @@ tribble(
                 When, 
                 .protect = FALSE)
 ```
+
+\newpage{}
 
 # Affiliations
 
