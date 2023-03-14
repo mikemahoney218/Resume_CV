@@ -55,22 +55,23 @@ make_detailed_section(BS_ESF_18, order = 1:4)
 
 \vspace{0.2cm}
 
-```{r eval = FALSE}
 ## In Review
+
+```{r eval = TRUE}
 tribble(
   ~ When, ~ BeforeYou, ~ You, ~ AfterYou, ~ Title, ~ Details, ~ url,
-  
+  "2023", "", "Mahoney, M. J.,", "Johnson, J. K., Silge, J., Frick, H., Kuhn, M., and Beier, C. M. In Review.", "Assessing the performance of spatial cross-validation approaches for models of spatially structured data.", "In review at Environmental Modelling \\& Software", "https://arxiv.org/abs/2303.07334"
   ) %>% 
   brief_entries(glue::glue("<BeforeYou> \\textbf{<You>} <AfterYou> <Title> <Details>. \\url{<url>}", 
                            .open = "<", 
                            .close = ">"), 
                 When, 
                 .protect = FALSE)
-#\vspace{0.4cm}
+```
 
+\vspace{0.4cm}
 
 ## Peer-Reviewed Publications
-```
 
 ### Journal Articles {.unnumbered}
 
@@ -207,7 +208,8 @@ tribble(
 ```{r}
 tribble(
   ~ When, ~ BeforeYou, ~ You, ~ AfterYou, ~ Title, ~ Details, ~ url,
-    "2022", "", "Mahoney, M. J.", "Beier, C. M., and Ackerman, A. C.", "Virtual Environments for Communicating Changing Forests", "Forest Ecosystem Monitoring Collective Conference, Burlington, VT", "", 
+    "2023", "", "Mahoney, M. J.", "", "spatialsample: A tidy approach to spatial cross-validation", "Greater Boston useR Group, Boston, MA", "", 
+  "2022", "", "Mahoney, M. J.", "Beier, C. M., and Ackerman, A. C.", "Virtual Environments for Communicating Changing Forests", "Forest Ecosystem Monitoring Collective Conference, Burlington, VT", "", 
     "2022", "Johnson, L. K.,", "Mahoney, M. J.,", "and Beier, C. M.", "A Map-based Stock Change Approach for Fine-scale Biomass and Carbon Accounting in NYS.", "Forest Ecosystem Monitoring Collective Conference, Burlington, VT", "", 
     "2022", "Johnson, L. K.,", "Mahoney, M. J.,", "and Beier, C. M.", "Historical Time Series Biomass Modeling: To Train on Plots or Pixels?", "American Geophysical Union Fall Meeting, Chicago, IL", "",
   "2022", "", "Mahoney, M. J.,", "Johnson, L. K., and Beier, C. M.", "Detecting regenerating forestland at a landscape level", "Ecological Society of America and Canadian Society for Ecology and Evolution Joint Annual Meeting, Montreal, Quebec, Canada", "", 
@@ -289,6 +291,7 @@ tribble(
 ```{r}
 tribble(
   ~ When, ~ Title, ~ Details, ~ url,
+  "2023", "Foundational Computing Skills: The Unix Shell, Version Control with Git, and Introduction to R",  "Mahoney, M. J., and Johnson, J. K. SUNY-ESF, Syracuse, NY (Virtual).", "",
   "2021", "Software Carpentry: The Unix Shell, Version Control with Git, and R for Reproducible Scientific Analysis",  "Mahoney, M. J., and Devlin, M.D. SUNY-ESF, Syracuse, NY (Virtual).", "",
 ) %>% 
   brief_entries(glue::glue("\\textbf{<Title>}. <Details> \\newline \\url{<url>}", 
