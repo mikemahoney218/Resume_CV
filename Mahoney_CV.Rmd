@@ -41,7 +41,7 @@ BS_ESF_18$Bullets <- c("Thesis: Beaver Foraging Preferences and Impacts on
                        Forest Structure in New York’s Adirondack Mountains")
 
 make_detailed_section(PHD_ESF_Current, order = 1:4)
-make_detailed_section(BS_ESF_18, order = 1:4)
+#make_detailed_section(BS_ESF_18, order = 1:4)
 ```
 
 ```{r eval=FALSE}
@@ -60,6 +60,8 @@ make_detailed_section(BS_ESF_18, order = 1:4)
 ```{r eval = TRUE}
 tribble(
   ~ When, ~ BeforeYou, ~ You, ~ AfterYou, ~ Title, ~ Details, ~ url,
+  "2023", "Johnson, L. K.,", "Mahoney, M. J.,", "Desrochers, M. L., and Beier, C. M. In Review.", "Mapping historical forest biomass for stock-change assessments at parcel to landscape scales", "In review at Forest Ecology and Management", "",
+  "2023", "", "Mahoney, M. J.", "In Review.", "waywiser: Ergonomic methods for assessing spatial models.", "In review at The Journal of Statistical Software", "https://arxiv.org/abs/2303.11312",
   "2023", "", "Mahoney, M. J.,", "Johnson, L. K., Silge, J., Frick, H., Kuhn, M., and Beier, C. M. In Review.", "Assessing the performance of spatial cross-validation approaches for models of spatially structured data.", "In review at Environmental Modelling \\& Software", "https://arxiv.org/abs/2303.07334"
   ) %>% 
   brief_entries(glue::glue("<BeforeYou> \\textbf{<You>} <AfterYou> <Title> <Details>. \\url{<url>}", 
@@ -135,7 +137,7 @@ brief_entries(Awards, What, When)
 ```{r}
 Fellowships <- tribble(
   ~ What, ~ When,
-  "Federation of Earth Science Information Partners (ESIP) Community Fellowship - Machine Learning Cluster", "2022", 
+  "Federation of Earth Science Information Partners (ESIP) Community Fellowship - Machine Learning Cluster", "2022 - Present", 
 )
 
 brief_entries(Fellowships, What, When)
