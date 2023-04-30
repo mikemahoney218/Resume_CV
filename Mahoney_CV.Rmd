@@ -103,7 +103,7 @@ tribble(
 tribble(
   ~ When, ~ BeforeYou, ~ You, ~ AfterYou, ~ Title, ~ Details, ~ url,
   # Add ISBN once it has one
-    "2023", "", "Mahoney, M. J.,", "Johnson, L. K., and Beier, C. M. In Press.", "AI for Shrubland Identification and Mapping.", " In: Artificial Intelligence in Earth Science: Best Practices and Fundamental Challenges. (Z. Sun, N. Cristea, P. Rivas, Eds). Elsevier, Amsterdam.", "",
+    "2023", "", "Mahoney, M. J.,", "Johnson, L. K., and Beier, C. M. 2023.", "AI for Shrubland Identification and Mapping.", " In: Artificial Intelligence in Earth Science: Best Practices and Fundamental Challenges. (Z. Sun, N. Cristea, P. Rivas, Eds). Elsevier, Amsterdam.", "",
     "2021", "", "Mahoney, M. J.,", "Beier, C. M., and Ackerman, A. C. 2021.", "Interactive landscape simulations for visual resource assessment.", "VRSC 2021 Conference Proceedings", ""
 ) %>% 
   brief_entries(glue::glue("<BeforeYou> \\textbf{<You>} <AfterYou> <Title> <Details>. \\url{<url>}", 
@@ -391,6 +391,7 @@ tribble(
   ~ Pkg, ~ When, ~ Role, ~ Details,
   "waywiser", "2022", "Lead developer", "Infrastructure for assessing spatial autocorrelation in model residuals",
   "rsample", "2022", "Developer", "Data resampling infrastructure for model evaluation",
+  "geojsonio", "2022", "Maintainer", "Utility to convert geographic data to GeoJSON and TopoJSON formats",
   "spatialsample", "2022", "Developer, Maintainer", "Functions for spatial resampling with the 'rsample' package", 
   "unifir", "2022", "Lead developer", "A Unifying API for working with Unity in R",
   "terrainr", "2021", "Lead developer", "Retrieve Data from the USGS National 
