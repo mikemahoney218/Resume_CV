@@ -120,6 +120,8 @@ tribble(
 ```{r}
 Awards <- tribble(
   ~ What, ~ When,
+  "Outstanding PhD Scholar Award", "2023",
+  "Excellence in Academic Research Award", "2023",
   "New York State GIS Association Application Award", "2021",
   "EarthCube AGU Scholarship", "2020",
   "Robin Hood Oak Award for Academic Excellence", "2018",
@@ -154,6 +156,7 @@ brief_entries(Fellowships, What, When)
 ```{r invited}
 tribble(
   ~ When, ~ BeforeYou, ~ You, ~ AfterYou, ~ Title, ~ Details, ~ url,
+  "2023", "", "Mahoney, M. J.", "", "Mapping shrublands across New York State: Targeted ML for informing management decisions", "Federation of Earth Science Information Partners (ESIP) July Meeting, Burlington, VT", "", 
   "2023", "", "Mahoney, M. J.", "", "Make Reproducibility Easy", "Federation of Earth Science Information Partners (ESIP) January Meeting, Annapolis, MD (Virtual)", "", 
   "2022", "", "Mahoney, M. J.", "", "Building trust in AI outputs: Approaches from NY's forest carbon monitoring program.", "Federation of Earth Science Information Partners (ESIP) July Meeting, Pittsburgh, PA", "",
   "2022", "", "Mahoney, M. J.", "", "Using AI/ML to help New York State manage lands for net zero carbon.", "Federation of Earth Science Information Partners (ESIP) January Meeting, Annapolis, MD (Virtual)", "",
@@ -236,11 +239,27 @@ tribble(
 ```{r}
 tribble(
   ~ When, ~ BeforeYou, ~ You, ~ AfterYou, ~ Title, ~ Details, ~ url,
+    "2023", "", "Mahoney, M. J.", "", "Assessing spatial models in scientifically sound ways is hard. New tools for the tidymodels modeling framework can help make it easier.", "Federation of Earth Science Information Partners (ESIP) July Meeting, Burlington, VT", "", 
   "2022", "Woodley, M.", "Mahoney, M. J.,", " Beier, C. M., and Tuttle, S. E.", "Spatiotemporal Dynamics of Snowpack in a Forested Watershed in the Adirondack Mountains, NY", "American Geophysical Union Fall Meeting, Chicago, IL", "",
   "2021", "", "Mahoney, M. J.,", " Johnson, L. K., Bevilacqua, E., and Beier, C. M.", "Filtering ground noise from LiDAR returns produces inferior models of forest aboveground biomass.", "American Geophysical Union Fall Meeting, New Orleans, LA", "",
   "2019", "Dillon, G.,", "Mahoney, M. J.,", "Chase, S., and Johnston, M.", "Nutritional Impacts on Invasive Beech Scale Quantification in Beech Bark Disease Aftermath Forests.", "New York Society of American Foresters Annual Meeting, Syracuse, NY", "",
   "2018", "", "Mahoney, M. J.,", "Zevin, R., and Stella, J.C.", "Impacts of Beaver on Forest Structure and Composition.", "Spotlight on Student Research, Syracuse, NY", "",
-  "2018", "", "Mahoney, M. J.,", "Leimanis, V., Desrochers, M. L., Giambona, B., Johnston, M. T., Yanai, R. D., and Dillon, G. A.", "Impacts of Fertilization on Causal Organisms of Beech Bark Disease.", "Spotlight on Student Research, Syracuse, NY", "",
+  "2018", "", "Mahoney, M. J.,", "Leimanis, V., Desrochers, M. L., Giambona, B., Johnston, M. T., Yanai, R. D., and Dillon, G. A.", "Impacts of Fertilization on Causal Organisms of Beech Bark Disease.", "Spotlight on Student Research, Syracuse, NY", ""
+) %>% 
+  brief_entries(glue::glue("<BeforeYou> \\textbf{<You>} <AfterYou> <Title> <Details>. \\url{<url>}", 
+                           .open = "<", 
+                           .close = ">"), 
+                When, 
+                .protect = FALSE)
+```
+
+\newpage{}
+
+## Poster Presentations (Cont.)
+
+```{r}
+tribble(
+  ~ When, ~ BeforeYou, ~ You, ~ AfterYou, ~ Title, ~ Details, ~ url,
   "2017", "Lasser, G. A., Johnston, M.,", "Mahoney, M.,", "Leimanis, V., and Stoodley, J.", "An Investigation of Nutritional Effects on Beech Bark Disease Causal Organisms.", "Forest Ecosystem Monitoring Collective Conference, Burlington, VT", "",
   "2017", "Lasser, G. A., Johnston, M.,", "Mahoney, M.,", "Leimanis, V., and Stoodley, J.", "An Investigation of Nutritional Effects on Beech Bark Disease Causal Organisms.", "Poster session presented at the Rochester Academy of Sciences Fall Scientific Paper Session, Rochester, NY", ""
 ) %>% 
@@ -256,8 +275,6 @@ tribble(
 # Invited to give within own department, on own campus
 # No guest lectures, that's padding
 ```
-
-\newpage{}
 
 # Research Experience
 
@@ -351,6 +368,9 @@ tribble(
 # Community Involvement/Outreach. [Optional.]  This includes work with libraries and schools, public lectures, etc.
 tribble(
   ~ When, ~ Group, ~ Role, ~ Details,
+  "2023", "Permian Global Research Limited",
+  "Data Scientist (Consultant)",
+  "Consultant (full-time equivalent) with Permian Global's research arm, working on tool development enabling teams to download spatial data, fit biomass and carbon models, predict large footprints, and assess results. Transformed multi-week modeling workflows into hours-long processes. Assisted with field sample design and model architecture reviews.",
   "2022", "RStudio PBC.", 
   "Open Source Engineering Intern", 
   "Intern with RStudio's tidymodels team, working on the R packages 'spatialsample' for spatial cross-validation, 'rsample' for resampling and cross-validation, 'waywiser' for measuring spatial autocorrelation in model residuals, and 'applicable' for calculating model applicability domains."
@@ -384,6 +404,8 @@ tribble(
 # Media Coverage. [Optional.] Coverage of your work by the media.
 ```
 
+\newpage{}
+
 # Software Development
 
 ```{r packages}
@@ -407,8 +429,6 @@ tribble(
                 When, 
                 .protect = FALSE)
 ```
-
-\newpage{}
 
 # Affiliations
 
