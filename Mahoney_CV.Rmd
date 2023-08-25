@@ -60,7 +60,6 @@ make_detailed_section(PHD_ESF_Current, order = 1:4)
 ```{r eval = TRUE}
 tribble(
   ~ When, ~ BeforeYou, ~ You, ~ AfterYou, ~ Title, ~ Details, ~ url,
-  "2023", "Johnson, L. K.,", "Mahoney, M. J.,", "Desrochers, M. L., and Beier, C. M. In Review.", "Mapping historical forest biomass for stock-change assessments at parcel to landscape scales", "In review at Forest Ecology and Management", "https://doi.org/10.48550/arXiv.2304.02632",
   "2023", "", "Mahoney, M. J.", "In Review.", "waywiser: Ergonomic methods for assessing spatial models.", "In review at The Journal of Statistical Software", "https://doi.org/10.48550/arXiv.2303.11312",
   "2023", "", "Mahoney, M. J.,", "Johnson, L. K., Silge, J., Frick, H., Kuhn, M., and Beier, C. M. In Review.", "Assessing the performance of spatial cross-validation approaches for models of spatially structured data.", "In review at Environmental Modelling \\& Software", "https://doi.org/10.48550/arXiv.2303.07334"
   ) %>% 
@@ -80,6 +79,7 @@ tribble(
 ```{r}
 tribble(
   ~ When, ~ BeforeYou, ~ You, ~ AfterYou, ~ Title, ~ Details, ~ url,
+  "2023", "Johnson, L. K.,", "Mahoney, M. J.,", "Desrochers, M. L., and Beier, C. M. 2023.", "Mapping historical forest biomass for stock-change assessments at parcel to landscape scales", "Forest Ecology and Management, 546, 121348", "https://doi.org/10.1016/j.foreco.2023.121348",
   "2022", "", "Mahoney, M. J.,", "Johnson, L. K., Guinan, A. Z., and Beier, C. M. 2022.", "Classification and mapping of low-statured 'shrubland' cover types in post-agricultural landscapes of the US Northeast.", "The International Journal of Remote Sensing, 43(19-24), 7117-7138", "https://doi.org/10.1080/01431161.2022.2155086",
   "2022", "Johnson, L. K.,", "Mahoney, M. J.,", "Bevilacqua, E., Stehman, S. V., Domke, G. M., and Beier, C. M. 2022.", "Fine-resolution landscape-scale biomass mapping using a spatiotemporal patchwork of LiDAR coverages", "The International Journal of Applied Earth Observation and Geoinformation, 114, 103059", "https://doi.org/10.1016/j.jag.2022.103059",
   "2022", "", "Mahoney, M. J.,", "Johnson, L. K., Bevilacqua, E., and Beier, C. M. 2022.", "Ground noise filtering produces inferior models of forest aboveground biomass.", "GIScience and Remote Sensing, 59(1), 1266-1280", "https://doi.org/10.1080/15481603.2022.2103069",
