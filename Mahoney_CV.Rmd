@@ -120,6 +120,8 @@ tribble(
 ```{r}
 Awards <- tribble(
   ~ What, ~ When,
+  "US Research Software Engineer Association Travel Award", "2023",
+  "STAC Sprint Travel Award", "2023",
   "Outstanding PhD Scholar Award", "2023",
   "Excellence in Academic Research Award", "2023",
   "New York State GIS Association Application Award", "2021",
