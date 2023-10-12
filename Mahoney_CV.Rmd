@@ -120,6 +120,7 @@ tribble(
 ```{r}
 Awards <- tribble(
   ~ What, ~ When,
+  "AGU Student Travel Grant", "2023",
   "US Research Software Engineer Association Travel Award", "2023",
   "STAC Sprint Travel Award", "2023",
   "Outstanding PhD Scholar Award", "2023",
@@ -312,6 +313,7 @@ tribble(
 ```{r}
 tribble(
   ~ When, ~ Title, ~ Details, ~ url,
+  "2023", "Foundations of Scientific Computing", "Mahoney, M. J., Johnson, L. K., and Desrochers, M. L. SUNY-ESF, Syracuse, NY.", "",
   "2023", "Foundational Computing Skills: The Unix Shell, Version Control with Git, and Introduction to R",  "Mahoney, M. J., and Johnson, L. K. SUNY-ESF, Syracuse, NY (Virtual).", "",
   "2021", "Software Carpentry: The Unix Shell, Version Control with Git, and R for Reproducible Scientific Analysis",  "Mahoney, M. J., and Devlin, M.D. SUNY-ESF, Syracuse, NY (Virtual).", "",
 ) %>% 
