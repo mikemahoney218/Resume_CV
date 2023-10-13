@@ -142,7 +142,7 @@ brief_entries(Awards, What, When)
 ```{r}
 Fellowships <- tribble(
   ~ What, ~ When,
-  "Federation of Earth Science Information Partners (ESIP) Community Fellowship - Machine Learning Cluster", "2022 - Present", 
+  "Federation of Earth Science Information Partners (ESIP) Community Fellowship - Machine Learning Cluster", "2022-2023", 
 )
 
 brief_entries(Fellowships, What, When)
@@ -159,6 +159,9 @@ brief_entries(Fellowships, What, When)
 ```{r invited}
 tribble(
   ~ When, ~ BeforeYou, ~ You, ~ AfterYou, ~ Title, ~ Details, ~ url,
+  "2023", "", "Mahoney, M. J.", "", "spatialsample: Infrastructure for spatial cross-validation", "EcoHealth Alliance, New York, NY (Virtual)", "",
+  "2023", "", "Mahoney, M. J.", "", "waywiser: An ergonomic toolbox for assesing spatial models", "EcoHealth Alliance, New York, NY (Virtual)", "",
+  "2023", "", "Mahoney, M. J.", "", "Making Sausage: How open source scientific software gets made -- and what keeps us from making more", "Federation of Earth Science Information Partners (ESIP) Open Science Cluster (Virtual)", "",
   "2023", "", "Mahoney, M. J.", "", "Mapping shrublands across New York State: Targeted ML for informing management decisions", "Federation of Earth Science Information Partners (ESIP) July Meeting, Burlington, VT", "", 
   "2023", "", "Mahoney, M. J.", "", "Make Reproducibility Easy", "Federation of Earth Science Information Partners (ESIP) January Meeting, Annapolis, MD (Virtual)", "", 
   "2022", "", "Mahoney, M. J.", "", "Building trust in AI outputs: Approaches from NY's forest carbon monitoring program.", "Federation of Earth Science Information Partners (ESIP) July Meeting, Pittsburgh, PA", "",
@@ -196,6 +199,8 @@ tribble(
                 .protect = FALSE)
 ```
 
+\newpage{}
+
 ## Workshops Facilitated
 
 ```{r conference_workshops}
@@ -209,14 +214,16 @@ tribble(
                 .protect = FALSE)
 ```
 
-\newpage{}
+
 
 ## Contributed Talks
 
 ```{r}
 tribble(
   ~ When, ~ BeforeYou, ~ You, ~ AfterYou, ~ Title, ~ Details, ~ url,
-    "2023", "", "Mahoney, M. J.", "", "spatialsample: A tidy approach to spatial cross-validation", "Greater Boston useR Group, Boston, MA", "", 
+  "2023", "", "Mahoney, M. J.", "Ackerman, A. C., and Beier, C. M", "Creating Data-Driven Interactive Virtual Environments for Communicating Forest Change", "American Geophysical Union Fall Meeting, San Francisco, CA", "", 
+  "2023", "", "Mahoney, M. J.", "Johnson, L. K., and Beier, C. M", "Consistent Workflows for Assessing Model Performance: Tools and Applications to Natural Climate Solutions", "American Geophysical Union Fall Meeting, San Francisco, CA", "", 
+  "2023", "", "Mahoney, M. J.", "", "spatialsample: A tidy approach to spatial cross-validation", "Greater Boston useR Group, Boston, MA", "", 
   "2022", "", "Mahoney, M. J.", "Beier, C. M., and Ackerman, A. C.", "Virtual Environments for Communicating Changing Forests", "Forest Ecosystem Monitoring Collective Conference, Burlington, VT", "", 
     "2022", "Johnson, L. K.,", "Mahoney, M. J.,", "and Beier, C. M.", "A Map-based Stock Change Approach for Fine-scale Biomass and Carbon Accounting in NYS.", "Forest Ecosystem Monitoring Collective Conference, Burlington, VT", "", 
     "2022", "Johnson, L. K.,", "Mahoney, M. J.,", "and Beier, C. M.", "Historical Time Series Biomass Modeling: To Train on Plots or Pixels?", "American Geophysical Union Fall Meeting, Chicago, IL", "",
@@ -242,12 +249,9 @@ tribble(
 ```{r}
 tribble(
   ~ When, ~ BeforeYou, ~ You, ~ AfterYou, ~ Title, ~ Details, ~ url,
-    "2023", "", "Mahoney, M. J.", "", "Assessing spatial models in scientifically sound ways is hard. New tools for the tidymodels modeling framework can help make it easier.", "Federation of Earth Science Information Partners (ESIP) July Meeting, Burlington, VT", "", 
-  "2022", "Woodley, M.", "Mahoney, M. J.,", " Beier, C. M., and Tuttle, S. E.", "Spatiotemporal Dynamics of Snowpack in a Forested Watershed in the Adirondack Mountains, NY", "American Geophysical Union Fall Meeting, Chicago, IL", "",
-  "2021", "", "Mahoney, M. J.,", " Johnson, L. K., Bevilacqua, E., and Beier, C. M.", "Filtering ground noise from LiDAR returns produces inferior models of forest aboveground biomass.", "American Geophysical Union Fall Meeting, New Orleans, LA", "",
-  "2019", "Dillon, G.,", "Mahoney, M. J.,", "Chase, S., and Johnston, M.", "Nutritional Impacts on Invasive Beech Scale Quantification in Beech Bark Disease Aftermath Forests.", "New York Society of American Foresters Annual Meeting, Syracuse, NY", "",
-  "2018", "", "Mahoney, M. J.,", "Zevin, R., and Stella, J.C.", "Impacts of Beaver on Forest Structure and Composition.", "Spotlight on Student Research, Syracuse, NY", "",
-  "2018", "", "Mahoney, M. J.,", "Leimanis, V., Desrochers, M. L., Giambona, B., Johnston, M. T., Yanai, R. D., and Dillon, G. A.", "Impacts of Fertilization on Causal Organisms of Beech Bark Disease.", "Spotlight on Student Research, Syracuse, NY", ""
+  "2023", "Johnson, L.K.,", "Mahoney, M. J.,", "and Beier, C. M.", "Bridging the Gap Between Pixels and Minimum Estimation Units: Small-Area Uncertainty Estimation with Forest Aboveground Biomass Maps.", "American Geophysical Union Fall Meeting, San Francisco, CA", "",
+  "2023", "", "Mahoney, M. J.", "", "Assessing spatial models in scientifically sound ways is hard. New tools for the tidymodels modeling framework can help make it easier.", "Federation of Earth Science Information Partners (ESIP) July Meeting, Burlington, VT", "", 
+  "2022", "Woodley, M.", "Mahoney, M. J.,", " Beier, C. M., and Tuttle, S. E.", "Spatiotemporal Dynamics of Snowpack in a Forested Watershed in the Adirondack Mountains, NY", "American Geophysical Union Fall Meeting, Chicago, IL", ""
 ) %>% 
   brief_entries(glue::glue("<BeforeYou> \\textbf{<You>} <AfterYou> <Title> <Details>. \\url{<url>}", 
                            .open = "<", 
@@ -263,6 +267,10 @@ tribble(
 ```{r}
 tribble(
   ~ When, ~ BeforeYou, ~ You, ~ AfterYou, ~ Title, ~ Details, ~ url,
+  "2021", "", "Mahoney, M. J.,", " Johnson, L. K., Bevilacqua, E., and Beier, C. M.", "Filtering ground noise from LiDAR returns produces inferior models of forest aboveground biomass.", "American Geophysical Union Fall Meeting, New Orleans, LA", "",
+  "2019", "Dillon, G.,", "Mahoney, M. J.,", "Chase, S., and Johnston, M.", "Nutritional Impacts on Invasive Beech Scale Quantification in Beech Bark Disease Aftermath Forests.", "New York Society of American Foresters Annual Meeting, Syracuse, NY", "",
+  "2018", "", "Mahoney, M. J.,", "Zevin, R., and Stella, J.C.", "Impacts of Beaver on Forest Structure and Composition.", "Spotlight on Student Research, Syracuse, NY", "",
+  "2018", "", "Mahoney, M. J.,", "Leimanis, V., Desrochers, M. L., Giambona, B., Johnston, M. T., Yanai, R. D., and Dillon, G. A.", "Impacts of Fertilization on Causal Organisms of Beech Bark Disease.", "Spotlight on Student Research, Syracuse, NY", "",
   "2017", "Lasser, G. A., Johnston, M.,", "Mahoney, M.,", "Leimanis, V., and Stoodley, J.", "An Investigation of Nutritional Effects on Beech Bark Disease Causal Organisms.", "Forest Ecosystem Monitoring Collective Conference, Burlington, VT", "",
   "2017", "Lasser, G. A., Johnston, M.,", "Mahoney, M.,", "Leimanis, V., and Stoodley, J.", "An Investigation of Nutritional Effects on Beech Bark Disease Causal Organisms.", "Poster session presented at the Rochester Academy of Sciences Fall Scientific Paper Session, Rochester, NY", ""
 ) %>% 
@@ -366,6 +374,8 @@ tribble(
 # Extracurricular University Service. [Optional. ] Can include involvement in student groups, sporting clubs, etc.
 ```
 
+\newpage{}
+
 # Non-Academic Experience
 
 ```{r}
@@ -407,8 +417,6 @@ tribble(
 ```{r, eval = FALSE}
 # Media Coverage. [Optional.] Coverage of your work by the media.
 ```
-
-\newpage{}
 
 # Software Development
 
