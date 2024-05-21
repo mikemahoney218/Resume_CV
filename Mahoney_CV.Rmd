@@ -55,11 +55,12 @@ make_detailed_section(PHD_ESF_Current, order = 1:4)
 
 \vspace{0.2cm}
 
-## In Review
+## Preprints and In Review
 
 ```{r eval = TRUE}
 tribble(
   ~ When, ~ BeforeYou, ~ You, ~ AfterYou, ~ Title, ~ Details, ~ url,
+  "2024", "Johnson, L. K.,", "Mahoney, M. J.,", "Domke, G. M., and Beier, C. M. 2022.", "New allometric models for the USA create a step-change in forest carbon estimation, modeling, and mapping", "In Review at Remote Sensing of Environment", "https://doi.org/10.48550/arXiv.2405.04507",
   "2023", "", "Mahoney, M. J.", "In Review.", "waywiser: Ergonomic methods for assessing spatial models.", "In review at The Journal of Statistical Software", "https://doi.org/10.48550/arXiv.2303.11312",
   "2023", "", "Mahoney, M. J.,", "Johnson, L. K., Silge, J., Frick, H., Kuhn, M., and Beier, C. M. In Review.", "Assessing the performance of spatial cross-validation approaches for models of spatially structured data.", "In review at Environmental Modelling \\& Software", "https://doi.org/10.48550/arXiv.2303.07334"
   ) %>% 
@@ -131,8 +132,7 @@ Awards <- tribble(
   "Robin Hood Oak Award for Academic Excellence", "2018",
   "Robert M. Hicks Award for Academic Achievement", "2018",
   "ESF Career Fellowship", "2018",
-  "Outstanding Student Award for Accomplishments in Field Ecology and 
-  Dendrology", "2017"
+  "Outstanding Student Award for Accomplishments in Field Ecology and Dendrology", "2017"
 )
 
 brief_entries(Awards, What, When)
